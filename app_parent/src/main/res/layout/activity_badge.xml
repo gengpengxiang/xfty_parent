@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoLinearLayout xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layout_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        tools:context="com.bj.hmxxparents.activity.BadgeActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <RelativeLayout
+                android:id="@+id/layout_close"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/iv_close"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/ic_close" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/layout_share"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/iv_share"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/ic_share_badge" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:paddingTop="50dp"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30px">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/img_kidPhoto"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        fresco:actualImageScaleType="focusCrop"
+                        fresco:placeholderImage="@drawable/icon_default_set_photo"
+                        fresco:placeholderImageScaleType="focusCrop"
+                        fresco:roundAsCircle="true"
+                        fresco:roundingBorderColor="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/img_kidPhoto"
+                        android:text="恭喜你获得新徽章"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30px"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已有"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_huodeNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="人获得"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="280dp"
+                android:layout_height="280dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40px"
+                android:background="@mipmap/ic_shine">
+                <!--<ImageView-->
+                <!--android:id="@+id/iv_badge"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content" />-->
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sv_badge"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40px"
+                android:text=""
+                android:textColor="@color/colorPrimary"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_shuoming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40px"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+    <!--分享的不可见view -->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_share2"
+        android:paddingTop="50dp"
+        android:visibility="invisible"
+        android:background="@color/white"
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        tools:context="com.bj.hmxxparents.activity.BadgeActivity">
+
+        <RelativeLayout
+            android:id="@+id/layout_title"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/img_touxiang2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    fresco:actualImageScaleType="focusCrop"
+                    fresco:placeholderImage="@drawable/icon_default_set_photo"
+                    fresco:placeholderImageScaleType="focusCrop"
+                    fresco:roundAsCircle="true"
+                    fresco:roundingBorderColor="@color/colorPrimary"
+                    />
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/tv_title2"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@+id/img_kidPhoto"
+                    android:layout_gravity="center_horizontal"
+                    android:text="恭喜你获得新徽章"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="50px"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/layout_badge"
+            android:layout_below="@+id/layout_title"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="800px"
+            android:layout_height="800px"
+            android:background="@mipmap/ic_shine">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:id="@+id/sv_badge2"
+                android:layout_width="500px"
+                android:layout_height="500px" />
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:id="@+id/iv_badge2"
+                android:layout_width="500px"
+                android:layout_height="500px" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginTop="50px"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tv_name2"
+            android:layout_below="@+id/layout_badge"
+            android:layout_gravity="center_horizontal"
+            android:text=""
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:visibility="invisible"
+            android:layout_marginTop="1px"
+            android:id="@+id/tv_jieshao"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_name2"
+            android:layout_gravity="center_horizontal"
+            android:text="asss"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:padding="30dp"
+            android:background="#f1f1f1"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/qrcode"
+                android:layout_centerVertical="true"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_download_qrcode" />
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@+id/qrcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:textSize="16sp"
+                    android:text="[幸福田园]APP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_test"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:text="长按识别二维码"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

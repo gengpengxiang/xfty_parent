@@ -1,0 +1,126 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">
+            @color/navigationBarColor
+        </item>
+        <item name="android:windowBackground">@android:color/white</item>
+
+        <!--<item name="windowActionBar">false</item>-->
+        <!--<item name="windowNoTitle">true</item>-->
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- 适用于开启滑动返回功能的Activity -->
+    <style name="AppTheme.Transparent">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!-- 适用于欢迎界面避免第一次进来白屏或黑屏 -->
+    <style name="AppTheme.Transparent.Splash">
+        <item name="android:background">@drawable/bg_splash</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <!-- PopupWindow弹出/隐藏动画 12-28 -->
+    <style name="MyPopupWindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/popupwindow_show_anim</item>
+        <item name="android:windowExitAnimation">@anim/popupwindow_hidden_anim</item>
+    </style>
+
+    <style name="MyPopupWindow_scale_anim_style">
+        <item name="android:windowEnterAnimation">@anim/popupwindow_show_anim_scale</item>
+        <item name="android:windowExitAnimation">@anim/popupwindow_hidden_anim_scale</item>
+    </style>
+
+    <style name="MyPopupWindow_scale_anim_style_2">
+        <item name="android:windowEnterAnimation">@anim/popupwindow_show_anim_scale_2</item>
+        <item name="android:windowExitAnimation">@anim/popupwindow_hidden_anim_scale_2</item>
+    </style>
+
+    <style name="MatchWrapTv" parent="MatchWrap">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/selector_btn_orange</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:onClick">onClick</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="AutoWrapTv" parent="AutoWrap">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/selector_btn_orange</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:onClick">onClick</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <drawable name="course_no_img">@color/float_transparent</drawable>
+    <drawable name="bg_splash">@color/colorPrimary</drawable>
+
+    <style name="loading_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="my_page_item_divider">
+        <item name="android:background">@color/line_gray_3</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.5dip</item>
+    </style>
+
+    <style name="MyCheckBoxPic" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/selector_checkbox_pic</item>
+    </style>
+
+    <style name="MyRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/selector_checkbox</item>
+    </style>
+
+    <drawable name="ic_select_interest_not">#00000000</drawable>
+    <drawable name="ic_red_bg">#4aa003</drawable>
+
+    <!-- 自定义弹出框-->
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    <!-- 窗口化Activity-->
+    <style name="Theme.DialogActivity" parent="@style/Theme.AppCompat.Light.Dialog">
+        <!--<item name="android:windowBackground">@drawable/shape_activity_window</item>-->
+        <!--<item name="android:windowBackground">@mipmap/bg_dialog_reason</item>-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+</resources>

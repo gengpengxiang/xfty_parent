@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_header_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#EFEFEF"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="257dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="32dp"
+            android:layout_marginTop="14dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_info_progress_bar_1" />
+
+        <TextView
+            android:layout_width="966px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="请您完善信息，只要3步即可让孩子获得个性化的学习服务"
+            android:textColor="#FF4aa003"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="58px"
+            android:background="@drawable/selector_item_click"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/tv_birthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="48px"
+                android:layout_marginLeft="48px"
+                android:layout_marginTop="48px"
+                android:text="请选择孩子生日"
+                android:textColor="#4A4A4A"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20px"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_chevron_right" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:background="#D8D8D8" />
+
+        <RelativeLayout
+            android:id="@+id/rl_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_item_click"
+            android:clickable="false">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="48px"
+                android:layout_marginLeft="48px"
+                android:layout_marginTop="48px"
+                android:text="孩子性别"
+                android:textColor="#4A4A4A"
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="400px"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rl_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="120px"
+                    android:layout_weight="1">
+
+                    <CheckBox
+                        android:id="@+id/cb_a"
+                        style="@style/MyRadioButton"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:id="@+id/tv_a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginStart="3dp"
+                        android:layout_toEndOf="@+id/cb_a"
+                        android:layout_toRightOf="@+id/cb_a"
+                        android:text="男"
+                        android:textColor="@color/text_color_standard"
+                        android:textSize="17sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="120px"
+                    android:layout_weight="1">
+
+                    <CheckBox
+                        android:id="@+id/cb_b"
+                        style="@style/MyRadioButton"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:id="@+id/tv_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginStart="3dp"
+                        android:layout_toEndOf="@+id/cb_b"
+                        android:layout_toRightOf="@+id/cb_b"
+                        android:text="女"
+                        android:textColor="@color/text_color_standard"
+                        android:textSize="17sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:background="#D8D8D8" />
+
+        <RelativeLayout
+            android:id="@+id/rl_relation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_item_click"
+            android:clickable="false">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="48px"
+                android:layout_marginLeft="48px"
+                android:layout_marginTop="48px"
+                android:text="您是孩子的"
+                android:textColor="#4A4A4A"
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="400px"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rl_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120px"
+                    android:layout_weight="1">
+
+                    <CheckBox
+                        android:id="@+id/cb_c"
+                        style="@style/MyRadioButton"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:id="@+id/tv_c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginStart="3dp"
+                        android:layout_toEndOf="@+id/cb_c"
+                        android:layout_toRightOf="@+id/cb_c"
+                        android:text="爸爸"
+                        android:textColor="@color/text_color_standard"
+                        android:textSize="17sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120px"
+                    android:layout_weight="1">
+
+                    <CheckBox
+                        android:id="@+id/cb_d"
+                        style="@style/MyRadioButton"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:id="@+id/tv_d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginStart="3dp"
+                        android:layout_toEndOf="@+id/cb_d"
+                        android:layout_toRightOf="@+id/cb_d"
+                        android:text="妈妈"
+                        android:textColor="@color/text_color_standard"
+                        android:textSize="17sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_e"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120px"
+                    android:layout_weight="1">
+
+                    <CheckBox
+                        android:id="@+id/cb_e"
+                        style="@style/MyRadioButton"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:id="@+id/tv_e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginStart="3dp"
+                        android:layout_toEndOf="@+id/cb_e"
+                        android:layout_toRightOf="@+id/cb_e"
+                        android:text="家长"
+                        android:textColor="@color/text_color_standard"
+                        android:textSize="17sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:background="#D8D8D8" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_nextStep"
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:background="@drawable/selector_btn_commend"
+        android:clickable="true"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="下一步"
+        android:textColor="@color/text_white"
+        android:textSize="20sp" />
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_header_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="学生ID是学生在幸福田园中的唯一识别号"
+                android:textColor="@color/text_color_standard"
+                android:textSize="@dimen/text_size_standard" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:text="如学生肖海明的ID为88888"
+                android:textColor="@color/text_color_standard"
+                android:textSize="@dimen/text_size_standard" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:text="请找您的孩子或者老师索要"
+                android:textColor="@color/text_color_standard"
+                android:textSize="@dimen/text_size_standard" />
+
+            <RelativeLayout
+                android:layout_width="240dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/shape_login_edt">
+
+                <EditText
+                    android:id="@+id/edt_studentId"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="请输入学生ID"
+                    android:inputType="number"
+
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textColorHint="@color/text_gray"
+                    android:textSize="@dimen/text_size_standard" />
+            </RelativeLayout>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/btn_confirm"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                fresco:placeholderImage="@drawable/btn_confirm"
+                fresco:placeholderImageScaleType="focusCrop"
+                fresco:viewAspectRatio="5.69" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_virtualUser"
+                android:layout_width="240dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/selector_virtual_user_btn_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="我没有学生ID，强行进入"
+                android:textColor="@drawable/selector_virtual_user_text_color"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

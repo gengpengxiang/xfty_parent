@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="?attr/colorPrimary"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/layout_header_left"
+        android:layout_width="50dp"
+        android:layout_height="50dp">
+        <ImageView
+            android:layout_centerInParent="true"
+            android:id="@+id/header_img_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_header_back" />
+    </RelativeLayout>
+
+    <TextView
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:textColor="@color/text_white"
+        android:id="@+id/tv_header_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:layout_centerInParent="true"
+        android:textSize="18sp"
+        android:textColor="@color/text_white"
+        android:id="@+id/tv_header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:gravity="center_vertical"
+        android:layout_alignParentRight="true"
+        android:paddingRight="16dp"
+        android:textColor="@color/text_white"
+        android:id="@+id/tv_header_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_marginRight="13dp"
+        android:id="@+id/layout_header_right"
+        android:layout_alignParentRight="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/ic_share_white"
+            android:layout_width="22dp"
+            android:layout_height="22dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

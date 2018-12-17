@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.bj.hmxxparents.widget.HobbyNoneView
+        android:id="@+id/tv_hobbyNone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_hobby_none_bg"
+        android:paddingBottom="10dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="10dp"
+        android:text="未参加任何培训"
+        android:textColor="@drawable/selector_hobby_none_textcolor"
+        android:textSize="16sp" />
+</FrameLayout>

@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">幸福田园</string>
+    <string name="bottom_tab_0">首页</string>
+    <string name="bottom_tab_1">逗课</string>
+    <string name="bottom_tab_2">我的</string>
+    <string name="title_relation_kid">关联学生</string>
+    <string name="title_student_info">学生信息</string>
+    <string name="title_qrcode_scan">扫一扫</string>
+    <string name="toast_home_exit_system">再按一次退出</string>
+
+    <string name="dialog_waiting">请稍后...</string>
+
+    <string name="custome_service_phonenumber">18911186856</string>
+    <string name="invite_parents_content">邀请使用幸福田园app，下载链接：http://t.cn/RXxyYu7</string>
+
+    <string name="str_connection_me">pkugame</string>
+    <string name="str_setting_slogan">顺天致性、仁智和美、多元幸福</string>
+    <string name="str_setting_desc">幸福田园学生发展评价系统是基于西辛小学教育集团幸福田园教育育人理念，设计开发的一款应用游戏化激励方式的智能软件系统。学生在西辛小学的幸福田园中，不知疲倦地采下六大学院的知识花粉，酿造出属于自己的蜂蜜，系统则记录下学生采集知识花粉的过程数据，借助智能分析技术，实时诊断学生的发展现状，为学生的个性化发展、未来幸福提供精准的依据。</string>
+
+    <string name="tips_score">点赞是老师对孩子平时因礼貌待人，乐于助人，遵守纪律等行为表现的肯定，点赞数量越多越能说明孩子是个品学兼修的好学生。</string>
+    <string name="tips_badge">学校倡导以“语言素养、科学素养、品德素养、运动素养、审美素养”为基本脉络的活力教育。学生在每一个素养上获得的成长，都将获得老师发的奖励徽章。</string>
+    <string name="tips_badge_pro">专项是学校每个月的学生行为指导主题，根据月份不同分为安静、悦读、健康、自信。学生的行为表现符合当月专项的奖励标准时，将获得一枚专项奖励卡片。</string>
+    <string name="tips_grade">等级是对您的孩子获得点赞和徽章数量的综合评估，随着数量的增加您的孩子将经历童生、秀才、举人、贡生、进士的等级提升，要鼓励学生积极快乐学习哦。</string>
+    <string name="tips_rank_list">目前，综合排行是根据你所得的徽章数和专项数的总和来排名。徽章排名是根据你所得的该类徽章的总数，来单独排名的。目前只显示全校前50位名单。</string>
+    <string name="text_desc_empty_news_home">孩子还未获得徽章或点赞，鼓励孩子加油吧~</string>
+    <string name="text_desc_empty_news_badge">无徽章不刻苦，不如回家卖红薯</string>
+    <string name="text_desc_empty_news_badge_pro">无单项没特长，平淡无奇心里慌</string>
+    <string name="text_desc_empty_news_commend">点赞鼓励孩子的行为习惯，孩子还未得到点赞哦~</string>
+
+    <string name="text_desc_empty_news_gaijin">孩子还未得到待改进哦~</string>
+
+    <string name="errcode_success">发送成功</string>
+    <string name="errcode_cancel">发送取消</string>
+    <string name="errcode_deny">发送被拒绝</string>
+    <string name="errcode_unsupported">不支持错误</string>
+    <string name="errcode_unknown">发送返回</string>
+
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+    <string name="str_report_protocol">《<u>订阅服务协议</u>》</string>
+</resources>

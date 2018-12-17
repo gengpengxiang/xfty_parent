@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_reading_game"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_item_click"
+    android:clickable="true"
+    android:visibility="visible">
+
+    <ImageView
+        android:id="@+id/img_1"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="72px"
+        android:layout_marginRight="63px"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_challenge" />
+
+    <FrameLayout
+        android:id="@+id/img_2"
+        android:layout_width="27dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="48px"
+        android:layout_marginRight="40px"
+        android:background="@drawable/ic_bookmark">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center_horizontal"
+            android:text="Hot"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_game_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10px"
+        android:layout_marginTop="36px"
+        android:layout_toLeftOf="@+id/img_2"
+        android:layout_toRightOf="@+id/img_1"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="字词朗读王者挑战赛"
+        android:textColor="#4A4A4A"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/tv_game_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_game_title"
+        android:layout_marginBottom="36px"
+        android:layout_marginRight="40px"
+        android:layout_toRightOf="@+id/img_1"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#707070"
+        android:textSize="13sp"
+        tools:text="挑战99999次，得分99999，全国排名99999" />
+</RelativeLayout>

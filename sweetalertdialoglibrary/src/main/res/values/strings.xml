@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SweetAlertDialog</string>
+    <string name="dialog_default_title">Here\'s a message!</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="LOADING">Loading...</string>
+    <string name="dialog_confirm">确定</string>
+    <string name="dialog_confirm_2">我知道了</string>
+    <string name="dialog_network_go">继续</string>
+    <string name="dialog_network_cancel">取消</string>
+    <string name="dialog_update_go">去升级</string>
+    <string name="dialog_update_cancel">忽略</string>
+    <string name="dialog_network_title">当前非wifi网络，继续观看会消耗手机流量。</string>
+</resources>

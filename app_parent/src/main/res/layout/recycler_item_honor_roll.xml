@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sv_badge"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:placeholderImageScaleType="focusCrop"/>
+
+
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_marginTop="2dp"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/bg_honor_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.bj.hmxxparents.widget.AutoScaleTextView
+            android:id="@+id/tv_classname"
+            android:textSize="12sp"
+            app:minTextSize="8sp"
+            android:singleLine="true"
+            android:paddingLeft="8dp"
+            android:paddingRight="5dp"
+            android:gravity="center"
+            android:text="二年级2班"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <com.bj.hmxxparents.widget.AutoScaleTextView
+            android:id="@+id/tv_date"
+            android:textSize="12sp"
+            app:minTextSize="8sp"
+            android:singleLine="true"
+            android:paddingLeft="5dp"
+            android:paddingRight="12dp"
+            android:gravity="center"
+            android:text="11.12-11.18"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_share"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:layout_alignParentRight="true"
+        android:text="分享"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/layout_medal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/layout_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:padding="8dp"
+                android:id="@+id/layout1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-10dp"
+                android:layout_below="@+id/tv_score1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@mipmap/ic_medal_silver">
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-10dp"
+                    android:id="@+id/sv_medal1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    fresco:actualImageScaleType="focusCrop"
+                    fresco:placeholderImage="@mipmap/ic_launcher"
+                    fresco:placeholderImageScaleType="focusCrop"
+                    fresco:roundAsCircle="true"
+                    />
+
+            </RelativeLayout>
+
+            <com.bj.hmxxparents.widget.AutoScaleTextView
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textColor="@color/text_orange2"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/tv_score1"
+                app:minTextSize="8sp"
+                android:singleLine="true"
+                android:gravity="center"
+                android:text="100"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/ic_shield_silver"/>
+
+            <TextView
+                android:textColor="@color/text_black"
+                android:id="@+id/tv_studentname1"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/layout1"
+                android:layout_centerHorizontal="true"
+                android:text="王小二"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:padding="8dp"
+                android:id="@+id/layout2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-10dp"
+                android:layout_below="@+id/tv_score2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@mipmap/ic_medal_gold">
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-10dp"
+                    android:id="@+id/sv_medal2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    fresco:actualImageScaleType="focusCrop"
+                    fresco:placeholderImage="@mipmap/ic_launcher"
+                    fresco:placeholderImageScaleType="focusCrop"
+                    fresco:roundAsCircle="true"
+                    />
+
+            </RelativeLayout>
+
+            <com.bj.hmxxparents.widget.AutoScaleTextView
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textColor="@color/text_orange2"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/tv_score2"
+                app:minTextSize="8sp"
+                android:singleLine="true"
+                android:gravity="center"
+                android:text="100"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/ic_shield_gold"/>
+
+            <TextView
+                android:textColor="@color/text_black"
+                android:id="@+id/tv_studentname2"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/layout2"
+                android:layout_centerHorizontal="true"
+                android:text="王小三"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:padding="8dp"
+                android:id="@+id/layout3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-10dp"
+                android:layout_below="@+id/tv_score3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@mipmap/ic_medal_bronze">
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-10dp"
+                    android:id="@+id/sv_medal3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    fresco:actualImageScaleType="focusCrop"
+                    fresco:placeholderImage="@mipmap/ic_launcher"
+                    fresco:placeholderImageScaleType="focusCrop"
+                    fresco:roundAsCircle="true"
+                    />
+
+            </RelativeLayout>
+
+            <com.bj.hmxxparents.widget.AutoScaleTextView
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textColor="@color/text_orange2"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/tv_score3"
+                app:minTextSize="8sp"
+                android:singleLine="true"
+                android:gravity="center"
+                android:text="100"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/ic_shield_bronze"/>
+
+            <TextView
+                android:textColor="@color/text_black"
+                android:id="@+id/tv_studentname3"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/layout3"
+                android:layout_centerHorizontal="true"
+                android:text="王小四"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/recyclerView"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/layout_medal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_below="@+id/recyclerView"
+        android:layout_marginTop="20dp"
+        android:background="@color/bg_gray"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+
+</RelativeLayout>

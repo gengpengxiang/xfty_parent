@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="20px"
+    android:paddingLeft="10px"
+    android:paddingRight="10px"
+    android:paddingBottom="20px"
+    android:id="@+id/layout_root"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/layout_pet"
+        android:layout_width="250px"
+        android:layout_height="270px"
+        android:background="@drawable/shape_stroke_orange">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:id="@+id/sv_pet"
+            android:layout_width="142px"
+            android:layout_height="200px"
+            />
+
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/iv_pet"
+            android:layout_width="140px"
+            android:layout_height="210px"
+            />
+
+
+        <ImageView
+            android:visibility="invisible"
+            android:layout_gravity="right|bottom"
+            android:id="@+id/iv_status"
+            android:layout_width="35px"
+            android:layout_height="35px"
+            android:background="@mipmap/ic_duihao"/>
+
+        <ImageView
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            android:id="@+id/iv_gray"
+            android:layout_width="250px"
+            android:layout_height="270px"
+            android:background="#80c9c9c4"/>
+
+        <ImageView
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            android:id="@+id/iv_lock"
+            android:layout_width="80px"
+            android:layout_height="100px"
+            android:background="@mipmap/ic_lock"/>
+    </FrameLayout>
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape_tv_corner_orange"
+        android:text="海狸"
+        android:textSize="10sp"
+        android:id="@+id/tv_name"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

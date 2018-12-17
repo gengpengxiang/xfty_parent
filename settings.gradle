@@ -1,0 +1,2 @@
+include ':easeui', ':autolayout', ':sweetalertdialoglibrary', ':imageSelector', ':pushSDK', ':abasesynclibrary', ':gamelibrary'
+include ':app_parent'

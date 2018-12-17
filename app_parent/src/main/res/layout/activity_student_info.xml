@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_header_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EFEFEF">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_schoolImg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:viewAspectRatio="2.66" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="270px"
+            android:background="@null"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@null">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/img_kidPhoto"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    fresco:actualImageScaleType="focusCrop"
+                    fresco:placeholderImage="@drawable/icon_default_set_photo"
+                    fresco:placeholderImageScaleType="focusCrop"
+                    fresco:roundAsCircle="true"
+                    fresco:roundingBorderColor="@color/colorPrimary"
+                    fresco:roundingBorderWidth="2dp" />
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignBottom="@+id/img_kidPhoto"
+                    android:layout_alignEnd="@+id/img_kidPhoto"
+                    android:layout_alignRight="@+id/img_kidPhoto"
+                    android:src="@drawable/ic_avatarpicture" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_studentName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:text="姓名：--"
+                android:textColor="@color/text_color_standard"
+                android:textSize="@dimen/text_size_menu" />
+
+            <TextView
+                android:id="@+id/tv_schoolName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="学校：--"
+                android:textColor="@color/text_color_standard"
+                android:textSize="@dimen/text_size_menu" />
+
+            <TextView
+                android:id="@+id/tv_className"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="班级：--"
+                android:textColor="@color/text_color_standard"
+                android:textSize="@dimen/text_size_menu" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/btn_back"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    fresco:placeholderImage="@drawable/btn_student_info_back"
+                    fresco:placeholderImageScaleType="focusCrop"
+                    fresco:viewAspectRatio="2.66" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/btn_confirm"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    fresco:placeholderImage="@drawable/btn_student_info_confirm"
+                    fresco:placeholderImageScaleType="focusCrop"
+                    fresco:viewAspectRatio="2.66" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

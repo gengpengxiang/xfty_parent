@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="16dp"
+    android:paddingLeft="16dp"
+
+    android:paddingRight="16dp">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sv_userPhoto"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="5dp"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:placeholderImage="@drawable/icon_default_photo"
+        fresco:placeholderImageScaleType="focusCrop"
+        fresco:roundAsCircle="true"
+        fresco:roundingBorderColor="@color/colorPrimary"
+        fresco:roundingBorderWidth="1dp" />
+
+
+    <RelativeLayout
+        android:layout_marginRight="20dp"
+        android:id="@+id/layout_title"
+        android:layout_toLeftOf="@+id/tv_date"
+        android:layout_toRightOf="@+id/sv_userPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:maxLength="9"
+                android:ellipsize="end"
+                android:text="给校长的信"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:lines="1"
+                android:singleLine="true"
+                android:gravity="center"
+                android:visibility="gone"
+                android:id="@+id/tv_huifu_new"
+                android:background="@mipmap/ic_email_news"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="新回复"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="2018-10-28"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_title"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/sv_userPhoto"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="" />
+
+    <View
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/tv_content"
+        android:background="@color/bg_gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+</RelativeLayout>

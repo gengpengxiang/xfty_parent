@@ -1,0 +1,75 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api 'com.android.support:support-v4:25.3.1'
+    api 'com.android.support:appcompat-v7:25.3.1'
+    api 'com.android.support:design:25.3.1'
+    api 'com.android.support:recyclerview-v7:25.3.1'
+    api 'com.android.support:cardview-v7:25.3.1'
+    api 'org.greenrobot:eventbus:3.0.0'
+    api 'com.squareup.okio:okio:1.13.0'
+    api 'com.squareup.okhttp3:okhttp:3.4.2'
+    api 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
+    // facebook 网络图片加载器
+    api 'com.facebook.fresco:fresco:1.3.0'
+    api 'com.facebook.fresco:imagepipeline-okhttp3:1.3.0'
+    api 'com.facebook.fresco:animated-gif:1.3.0'
+    // largeImage
+    api 'com.shizhefei:LargeImageView:1.0.9'
+    // Glide
+    api 'com.github.bumptech.glide:glide:3.7.0'
+    api 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar'
+
+//    api 'com.commit451:PhotoView:1.2.4'
+
+    api 'com.isseiaoki:simplecropview:1.0.13'
+    api 'com.pnikosis:materialish-progress:1.0'
+    api 'cn.carbs.android:MaxHeightView:1.0.0'
+    // XRefreshView
+    api 'com.huxq17.xrefreshview:xrefreshview:3.6.9'
+    // 二维码扫描 zbar
+    api 'cn.bingoogolapple:bga-qrcodecore:1.1.6@aar'
+    api 'cn.bingoogolapple:bga-zbar:1.1.6@aar'
+    // 二维码扫描 zxing
+    api 'com.google.zxing:core:3.2.1'
+    api 'cn.bingoogolapple:bga-qrcodecore:1.1.7@aar'
+    api 'cn.bingoogolapple:bga-zxing:1.1.7@aar'
+    // RxPermission
+    api 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.3@aar'
+    // RxJava
+    api 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    api 'io.reactivex.rxjava2:rxjava:2.1.1'
+    // 微信 分享、登录、收藏、支付
+    api 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:1.3.4'
+    // 图表
+    api 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+    // 友盟统计 com.umeng.analytics:analytics:latest.integration
+    api 'com.umeng.analytics:analytics:6.1.2'
+    api 'com.github.markzhai:blockcanary-android:1.5.0'
+}

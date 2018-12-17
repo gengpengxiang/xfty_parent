@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4aa003"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="38dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_qrcode_app" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="28dp"
+        android:layout_marginTop="10dp"
+        android:text="长按识别二维码，加入幸福田园"
+        android:textColor="#FFFFFFFF"
+        android:textSize="15sp" />
+</LinearLayout>

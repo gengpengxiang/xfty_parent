@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_layout_corner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:text="是否保存当前装扮？"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_below="@+id/tv1"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:padding="15dp"
+                android:text="取消"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_layout_corner_left"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_confirm"
+                android:padding="15dp"
+                android:textColor="@color/white"
+                android:text="确定"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_layout_corner_right"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@mipmap/ic_clothes2"/>
+
+
+</RelativeLayout>

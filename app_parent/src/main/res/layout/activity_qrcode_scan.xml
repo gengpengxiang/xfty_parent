@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchMatch">
+
+    <FrameLayout
+        android:id="@+id/contentView"
+        style="@style/MatchMatch" />
+
+    <include layout="@layout/layout_header_toolbar" />
+</RelativeLayout>

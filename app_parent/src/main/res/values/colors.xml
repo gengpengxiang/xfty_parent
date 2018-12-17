@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#4aa003</color>-->
+    <!--<color name="colorPrimaryDark">#4aa003</color>4aa003-->
+    <color name="colorPrimary">#4aa003</color>
+    <color name="colorPrimaryDark">#4aa003</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorPrimaryClick">#4aa003</color>
+
+    <!--<color name="navigationBarColor">#f46444</color>-->
+    <color name="navigationBarColor">#4aa003</color>
+    <color name="colorPrimaryDarkTrans">#CC4aa003</color>
+
+    <color name="line_gray">#CBCCCD</color>
+    <color name="line_gray_2">#D9D9D9</color>
+    <color name="line_gray_3">#D8D8D8</color>
+
+    <color name="navpage">#FFFFFF</color>
+
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_black">#424242</color>
+    <color name="text_gray">#737373</color>
+    <color name="text_blue">#0073ff</color>
+    <color name="text_red">#FF4081</color>
+    <color name="text_yellow">#FF911B</color>
+
+    <color name="bg_gray">#EFEFEF</color>
+    <color name="bg_white">#FFFFFF</color>
+
+    <color name="search_hint_text_color">#FFF</color>
+    <color name="search_text_color">#515A72</color>
+    <color name="text_color_small">#838383</color>
+    <color name="text_color_standard">#4A4A4A</color>
+
+    <color name="text_tab_selected">#4aa003</color>
+    <color name="text_tab_unselected">#979797</color>
+    <color name="text_tab_unselected_2">#474747</color>
+
+    <color name="color_transparent">#00000000</color>
+
+    <color name="text_orange">#e58b19</color>
+    <color name="text_orange2">#ea5400</color>
+</resources>

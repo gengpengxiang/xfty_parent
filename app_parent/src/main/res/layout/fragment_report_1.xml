@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_shareView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_kidPhoto"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:placeholderImage="@drawable/icon_default_photo"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:roundAsCircle="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_stroke_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="23dp"
+                    android:text="徽章班级排名"
+                    android:textColor="#FFF"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_badgeRank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#FFF"
+                    android:textSize="36sp"
+                    tools:text="8" />
+
+                <cn.bingoogolapple.progressbar.BGAProgressBar
+                    android:id="@+id/pb_example"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:bga_pb_isCapRounded="false"
+                    app:bga_pb_isHiddenPercent="true"
+                    app:bga_pb_isHiddenText="true"
+                    app:bga_pb_mode="horizontal"
+                    app:bga_pb_reachedColor="#00000000"
+                    app:bga_pb_reachedHeight="15dp"
+                    app:bga_pb_textColor="#00000000"
+                    app:bga_pb_textMargin="4dp"
+                    app:bga_pb_textSize="12sp"
+                    app:bga_pb_unReachedColor="#00000000"
+                    app:bga_pb_unReachedHeight="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="8dp"
+                    android:text="我的徽章数"
+                    android:textColor="#FFF"
+                    android:textSize="15sp" />
+
+                <cn.bingoogolapple.progressbar.BGAProgressBar
+                    android:id="@+id/pb_myBadgeNumber"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    app:bga_pb_isCapRounded="false"
+                    app:bga_pb_isHiddenPercent="true"
+                    app:bga_pb_isHiddenText="false"
+                    app:bga_pb_mode="horizontal"
+                    app:bga_pb_reachedColor="#4A90E2"
+                    app:bga_pb_reachedHeight="15dp"
+                    app:bga_pb_textColor="#FFF"
+                    app:bga_pb_textMargin="4dp"
+                    app:bga_pb_textSize="12sp"
+                    app:bga_pb_unReachedColor="#00000000"
+                    app:bga_pb_unReachedHeight="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="8dp"
+                    android:text="班级平均数"
+                    android:textColor="#FFF"
+                    android:textSize="15sp" />
+
+                <cn.bingoogolapple.progressbar.BGAProgressBar
+                    android:id="@+id/pb_classBadgeNumber"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    app:bga_pb_isCapRounded="false"
+                    app:bga_pb_isHiddenPercent="true"
+                    app:bga_pb_isHiddenText="false"
+                    app:bga_pb_mode="horizontal"
+                    app:bga_pb_reachedColor="#7ED321"
+                    app:bga_pb_reachedHeight="15dp"
+                    app:bga_pb_textColor="#FFF"
+                    app:bga_pb_textMargin="4dp"
+                    app:bga_pb_textSize="12sp"
+                    app:bga_pb_unReachedColor="#00000000"
+                    app:bga_pb_unReachedHeight="0dp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_stroke_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="23dp"
+                    android:text="点赞班级排名"
+                    android:textColor="#FFF"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_commendRank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#FFF"
+                    android:textSize="36sp"
+                    tools:text="8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="8dp"
+                    android:text="我的点赞数"
+                    android:textColor="#FFF"
+                    android:textSize="15sp" />
+
+                <cn.bingoogolapple.progressbar.BGAProgressBar
+                    android:id="@+id/pb_myCommendNumber"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    app:bga_pb_isCapRounded="false"
+                    app:bga_pb_isHiddenPercent="true"
+                    app:bga_pb_isHiddenText="false"
+                    app:bga_pb_mode="horizontal"
+                    app:bga_pb_reachedColor="#9012FE"
+                    app:bga_pb_reachedHeight="15dp"
+                    app:bga_pb_textColor="#FFF"
+                    app:bga_pb_textMargin="4dp"
+                    app:bga_pb_textSize="12sp"
+                    app:bga_pb_unReachedColor="#00000000"
+                    app:bga_pb_unReachedHeight="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="8dp"
+                    android:text="班级平均数"
+                    android:textColor="#FFF"
+                    android:textSize="15sp" />
+
+                <cn.bingoogolapple.progressbar.BGAProgressBar
+                    android:id="@+id/pb_classCommendNumber"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    app:bga_pb_isCapRounded="false"
+                    app:bga_pb_isHiddenPercent="true"
+                    app:bga_pb_isHiddenText="false"
+                    app:bga_pb_mode="horizontal"
+                    app:bga_pb_reachedColor="#7ED321"
+                    app:bga_pb_reachedHeight="15dp"
+                    app:bga_pb_textColor="#FFF"
+                    app:bga_pb_textMargin="4dp"
+                    app:bga_pb_textSize="12sp"
+                    app:bga_pb_unReachedColor="#00000000"
+                    app:bga_pb_unReachedHeight="0dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="徽章荣誉榜"
+        android:textColor="#FFFFFFFF"
+        android:textSize="22sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_badge_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/iv_badge_1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:placeholderImage="@drawable/icon_default_photo"
+                fresco:placeholderImageScaleType="focusCrop"
+                fresco:roundAsCircle="true" />
+
+            <TextView
+                android:id="@+id/tv_badge_num_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="55"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_badge_name_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="李明李明"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_badge_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/iv_badge_2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    fresco:actualImageScaleType="focusCrop"
+                    fresco:placeholderImage="@drawable/icon_default_photo"
+                    fresco:placeholderImageScaleType="focusCrop"
+                    fresco:roundAsCircle="true" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_badge_num_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="55"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_badge_name_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="李明李"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_badge_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/iv_badge_3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    fresco:actualImageScaleType="focusCrop"
+                    fresco:placeholderImage="@drawable/icon_default_photo"
+                    fresco:placeholderImageScaleType="focusCrop"
+                    fresco:roundAsCircle="true" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_badge_num_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="55"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_badge_name_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="李明"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="44dp"
+        android:text="点赞荣誉榜"
+        android:textColor="#FFFFFFFF"
+        android:textSize="22sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_commend_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/iv_commend_1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:placeholderImage="@drawable/icon_default_photo"
+                fresco:placeholderImageScaleType="focusCrop"
+                fresco:roundAsCircle="true" />
+
+            <TextView
+                android:id="@+id/tv_commend_num_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="55"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_commend_name_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="李明李明"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_commend_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/iv_commend_2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    fresco:actualImageScaleType="focusCrop"
+                    fresco:placeholderImage="@drawable/icon_default_photo"
+                    fresco:placeholderImageScaleType="focusCrop"
+                    fresco:roundAsCircle="true" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_commend_num_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="55"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_commend_name_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="李明李"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_commend_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/iv_commend_3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    fresco:actualImageScaleType="focusCrop"
+                    fresco:placeholderImage="@drawable/icon_default_photo"
+                    fresco:placeholderImageScaleType="focusCrop"
+                    fresco:roundAsCircle="true" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_commend_num_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="55"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_commend_name_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="李明"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

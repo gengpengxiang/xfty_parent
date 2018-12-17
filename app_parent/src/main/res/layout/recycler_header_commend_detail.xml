@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_kid_pingyu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="42px"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_likepage" />
+
+        <TextView
+            android:id="@+id/tv_kid_pingyu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="54px"
+            android:layout_marginTop="42px"
+            android:background="@drawable/shape_bg_tv_badge_detail"
+            android:ellipsize="end"
+            android:lines="1"
+            android:paddingBottom="18px"
+            android:paddingLeft="57px"
+            android:paddingRight="57px"
+            android:paddingTop="15px"
+            android:textColor="@color/text_color_standard"
+            android:textSize="15sp"
+            tools:text="恭喜你获得 45 个点赞" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_kid_pingyu">
+
+        <TextView
+            android:id="@+id/tv_latest_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="72px"
+            android:layout_marginTop="72px"
+            android:text="点赞记录"
+            android:textColor="#838383"
+            android:textSize="@dimen/text_size_standard" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40px"
+            android:layout_marginRight="40px"
+            android:layout_toLeftOf="@+id/tv_latest_news"
+            android:layout_toStartOf="@+id/tv_latest_news"
+            android:background="@color/line_gray_3" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40px"
+            android:layout_marginRight="40px"
+            android:layout_toEndOf="@+id/tv_latest_news"
+            android:layout_toRightOf="@+id/tv_latest_news"
+            android:background="@color/line_gray_3" />
+    </RelativeLayout>
+</RelativeLayout>

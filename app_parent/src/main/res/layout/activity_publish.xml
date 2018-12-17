@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.bj.hmxxparents.countryside.topic.PublishActivity">
+
+    <include layout="@layout/layout_header_new" />
+
+    <EditText
+        android:padding="16dp"
+        android:gravity="top"
+        android:id="@+id/et"
+        android:background="@null"
+        android:hint="发布通知或感想..."
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <View
+        android:background="@color/bg_gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:id="@+id/layout_select"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/iv_picture"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/ic_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginLeft="16dp"
+            android:text="选择图片"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:background="@color/bg_gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <cn.bingoogolapple.photopicker.widget.BGASortableNinePhotoLayout
+        android:id="@+id/bgaSortPhotoLayout"
+        style="@style/WrapWrap"
+        android:layout_margin="10dp"
+        app:bga_snpl_deleteDrawable="@mipmap/bga_pp_ic_delete"
+        app:bga_snpl_deleteDrawableOverlapQuarter="false"
+        app:bga_snpl_editable="true"
+        app:bga_snpl_itemCornerRadius="0dp"
+        app:bga_snpl_itemSpanCount="3"
+        app:bga_snpl_itemWhiteSpacing="4dp"
+        app:bga_snpl_itemWidth="0dp"
+        app:bga_snpl_maxItemCount="9"
+        app:bga_snpl_otherWhiteSpacing="100dp"
+        app:bga_snpl_placeholderDrawable="@mipmap/bga_pp_ic_holder_light"
+        app:bga_snpl_plusDrawable="@mipmap/bga_pp_ic_plus"
+        app:bga_snpl_plusEnable="true"
+        app:bga_snpl_sortable="true" />
+
+</LinearLayout>

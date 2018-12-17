@@ -1,0 +1,107 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    //use legacy for android 6.0
+    useLibrary 'org.apache.http.legacy'
+    compileSdkVersion 25
+//    buildToolsVersion '27.0.1'
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.bj.hmxxparents"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 11//10
+        versionName "1.5.1"//1.4.2  别忘了改正式地址
+        // Enabling MultiDex support.
+        multiDexEnabled true
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+        preDexLibraries = false
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    signingConfigs {
+        release {
+            storeFile file("../DouHaoEdu.jks")
+            storePassword "douhaojiaoyu"
+            keyAlias "xiaohaiming"
+            keyPassword "douhaojiaoyu"
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets.main {
+        jni.srcDirs = []
+        jniLibs.srcDir "src/main/libs"
+    }
+
+
+    flavorDimensions "default"
+    productFlavors {
+        wandoujia { dimension "default" }
+        baidu { dimension "default" }
+        xiaomi { dimension "default" }
+        yingyongbao { dimension "default" }
+        huawei { dimension "default" }
+
+        productFlavors.all { flavor ->
+            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        }
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+greendao {
+    schemaVersion 1
+    daoPackage 'com.zz.greendao.gen'
+    targetGenDir 'src/main/java'
+}
+dependencies {
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    // compile project(':autolayout')
+    api project(':sweetalertdialoglibrary')
+    api project(':pushSDK')
+    api project(':imageSelector')
+    api project(':easeui')
+    api project(':gamelibrary')
+    implementation 'com.android.support:multidex:1.0.1'
+    // greendao
+    implementation 'org.greenrobot:greendao:3.2.2'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    // ButterKnife
+    implementation 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    // UM 统计
+    // compile 'com.umeng.analytics:analytics:latest.integration'
+    implementation 'com.google.code.gson:gson:2.8.1'
+
+//    compile 'com.aliyun.dpa:oss-android-sdk:2.4.5'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    compile 'com.lzy.net:okgo:3.0.4'
+    compile 'com.alibaba:fastjson:1.2.46'
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4'
+    compile 'com.githang:android-crash:1.0'
+    compile 'top.zibin:Luban:1.1.7'
+    implementation 'cn.bingoogolapple:bga-photopicker:1.2.8@aar'
+    implementation 'cn.bingoogolapple:bga-baseadapter:1.2.8@aar'
+
+    implementation 'com.hjq:xxpermissions:5.2'
+}

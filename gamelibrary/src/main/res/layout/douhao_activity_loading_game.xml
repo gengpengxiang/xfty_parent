@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFEF"
+    android:orientation="vertical">
+
+    <include layout="@layout/douhao_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="字词朗读王者挑战赛"
+            android:textColor="#4aa003"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="540px"
+                android:layout_height="480px"
+                android:layout_marginLeft="52px"
+                android:layout_marginTop="140px"
+                android:background="@drawable/ic_bubble">
+
+                <TextView
+                    android:id="@+id/tv_tips"
+                    android:layout_width="420px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="80px"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="48px"
+                    tools:text="按下【按住朗读】按钮，大声朗读页面字词，与全国参赛者一起挑战" />
+            </FrameLayout>
+
+            <ImageView
+                android:layout_width="444px"
+                android:layout_height="723px"
+                android:layout_marginBottom="116px"
+                android:layout_marginLeft="524px"
+                android:layout_marginTop="300px"
+                android:src="@drawable/ic_doctor" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="参与朗读挑战，夺免费参与博雅青少年训练计划（北京）资格"
+            android:textColor="#4A4A4A"
+            android:textSize="17sp" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:layout_margin="30px"
+            android:progressDrawable="@drawable/bg_progress_time" />
+
+        <TextView
+            android:id="@+id/tv_startGame"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/selector_bg_text_start"
+            android:clickable="false"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="马上开始"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </LinearLayout>
+</LinearLayout>
