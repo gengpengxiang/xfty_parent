@@ -41,4 +41,17 @@
 
     <color name="text_orange">#e58b19</color>
     <color name="text_orange2">#ea5400</color>
+    <color name="text_orange_deep">#ec6232</color>
+    <color name="text_blue_deep">#00549b</color>
+    <color name="text_blue_light">#2f92d1</color>
+    <color name="text_blue_light2">#328eec</color>
+    <color name="color_line_blue">#4a8fdd</color>
+    <color name="color_bar_purple">#a256ce</color>
+    <color name="color_bar_blue">#1bb2e0</color>
+    <color name="color_bar_pink">#e76b9d</color>
+    <color name="color_bar_bronze">#e6a539</color>
+    <color name="color_bar_green">#59c675</color>
+    <color name="color_line_green">#75c621</color>
+    <color name="color_bar_yellow">#dfd826</color>
+
 </resources>

@@ -11,6 +11,21 @@ public class MessageEvent {
     private String key;
     private String param1,param2,param3;
 
+    private int page;
+
+    public MessageEvent(String message, String param1, int page) {
+        this.message = message;
+        this.param1 = param1;
+        this.page = page;
+    }
+
+    public int getPage() {
+        return page;
+    }
+
+    public void setPage(int page) {
+        this.page = page;
+    }
 
     public MessageEvent(String message) {
         this.message = message;

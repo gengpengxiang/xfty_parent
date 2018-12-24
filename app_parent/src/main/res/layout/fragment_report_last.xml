@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/bg_report2">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/img_splash"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        fresco:actualImageScaleType="fitXY"
+        fresco:roundedCornerRadius="15dp"
+        fresco:placeholderImage="@mipmap/ic_launcher_login"
+        fresco:placeholderImageScaleType="fitXY" />
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/img_splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="@string/str_setting_slogan"
+        android:textColor="#FFFFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:layout_marginBottom="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="本报告由幸福田园提供\n解释权归幸福田园所有，与老师无关"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" />
+</RelativeLayout>

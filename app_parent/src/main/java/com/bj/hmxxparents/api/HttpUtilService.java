@@ -32,14 +32,14 @@ import okhttp3.Response;
 public class HttpUtilService {
 
     //正式版
-//    public static final String BASE_URL = "http://xixin.gamepku.com/";
-//    public static final String BASE_RESOURCE_URL = "http://xixin.gamepku.com/files/";
-//    public static final String BASE_FILES_UPLOAD_URL = "http://xixin.gamepku.com/";
+    public static final String BASE_URL = "http://xixin.gamepku.com/";
+    public static final String BASE_RESOURCE_URL = "http://xixin.gamepku.com/files/";
+    public static final String BASE_FILES_UPLOAD_URL = "http://xixin.gamepku.com/";
 
     //测试版
-    public static final String BASE_URL = "http://testxixin.gamepku.com/";
-    public static final String BASE_RESOURCE_URL = "http://testxixin.gamepku.com/files/";
-    public static final String BASE_FILES_UPLOAD_URL = "http://testxixin.gamepku.com/";
+//    public static final String BASE_URL = "http://testxixin.gamepku.com/";
+//    public static final String BASE_RESOURCE_URL = "http://testxixin.gamepku.com/files/";
+//    public static final String BASE_FILES_UPLOAD_URL = "http://testxixin.gamepku.com/";
 
     public static final String BASE_API_URL = BASE_URL + "index.php/";
     public static final String DOWNLOAD_PATH = Environment.getExternalStorageDirectory().getAbsolutePath()

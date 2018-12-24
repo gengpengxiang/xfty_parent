@@ -11,8 +11,8 @@ android {
         applicationId "com.bj.hmxxparents"
         minSdkVersion 19
         targetSdkVersion 25
-        versionCode 11//10
-        versionName "1.5.1"//1.4.2  别忘了改正式地址
+        versionCode 12//11
+        versionName "1.6"//1.5.1  别忘了改正式地址
         // Enabling MultiDex support.
         multiDexEnabled true
     }

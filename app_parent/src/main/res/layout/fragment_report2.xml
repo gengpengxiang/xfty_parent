@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="@mipmap/bg_report1">
+
+   <TextView
+       android:textColor="@color/text_blue_deep"
+       android:layout_marginTop="80dp"
+       android:textSize="24sp"
+       android:layout_gravity="center_horizontal"
+       android:text=""
+       android:id="@+id/tv_report_name"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:paddingTop="15dp"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape_circle_half"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_score"
+        android:textSize="36sp"
+        android:text=""
+        android:textColor="@color/text_orange_deep"
+        android:layout_width="120dp"
+        android:layout_height="120dp" />
+
+    <RelativeLayout
+        android:layout_marginTop="-60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:background="@drawable/shape_layout_corner">
+
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:layout_marginTop="20dp"
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/chart"
+            android:id="@+id/mRecyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:overScrollMode="never"/>
+
+    </RelativeLayout>
+</LinearLayout>

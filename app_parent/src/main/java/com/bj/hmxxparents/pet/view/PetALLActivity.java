@@ -118,15 +118,15 @@ public class PetALLActivity extends BaseActivity implements IViewPet {
         kidId = PreferencesUtils.getString(this, MLProperties.BUNDLE_KEY_KID_ID);
         petPresenter = new PetPresenter(this, this);
 
-        Glide.with(this).load(R.mipmap.bg_pet_all)
-                .into(new ViewTarget<View, GlideDrawable>(layoutRoot) {
-                    //括号里为需要加载的控件
-                    @Override
-                    public void onResourceReady(GlideDrawable resource,
-                                                GlideAnimation<? super GlideDrawable> glideAnimation) {
-                        this.view.setBackground(resource.getCurrent());
-                    }
-                });
+//        Glide.with(this).load(R.mipmap.bg_pet_all)
+//                .into(new ViewTarget<View, GlideDrawable>(layoutRoot) {
+//                    //括号里为需要加载的控件
+//                    @Override
+//                    public void onResourceReady(GlideDrawable resource,
+//                                                GlideAnimation<? super GlideDrawable> glideAnimation) {
+//                        this.view.setBackground(resource.getCurrent());
+//                    }
+//                });
         initViews();
         petPresenter.getAllPets(kidId);
 

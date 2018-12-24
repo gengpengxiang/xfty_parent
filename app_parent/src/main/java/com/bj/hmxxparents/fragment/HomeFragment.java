@@ -54,6 +54,7 @@ import com.bj.hmxxparents.activity.CommendDetailActivity;
 import com.bj.hmxxparents.activity.GaijinDetailActivity;
 import com.bj.hmxxparents.activity.LevelDetailActivity;
 import com.bj.hmxxparents.activity.LoadingGameActivity;
+import com.bj.hmxxparents.activity.MainActivity;
 import com.bj.hmxxparents.activity.QRCodeScanActivity;
 import com.bj.hmxxparents.activity.RankListActivity;
 import com.bj.hmxxparents.activity.RelationKidActivity;
@@ -72,6 +73,7 @@ import com.bj.hmxxparents.entity.ReportInfo;
 import com.bj.hmxxparents.manager.UMPushManager;
 import com.bj.hmxxparents.pet.model.StudentInfo;
 import com.bj.hmxxparents.pet.view.PetALLActivity;
+import com.bj.hmxxparents.report.ReportActivity;
 import com.bj.hmxxparents.service.DownloadAppService;
 import com.bj.hmxxparents.utils.AppUtils;
 import com.bj.hmxxparents.utils.LL;
@@ -80,6 +82,8 @@ import com.bj.hmxxparents.utils.PreferencesUtils;
 import com.bj.hmxxparents.utils.StringUtils;
 import com.bj.hmxxparents.utils.T;
 import com.bj.hmxxparents.widget.AutoScaleTextView;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.douhao.game.entity.ChallengeInfo;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.backends.pipeline.PipelineDraweeController;
@@ -207,6 +211,17 @@ public class HomeFragment extends BaseFragment {
         initToolBar();
 
         initView();
+
+        if(!StringUtils.isEmpty(PreferencesUtils.getString(getActivity(), "URL_PET",""))){
+            String urlPet = PreferencesUtils.getString(getActivity(), "URL_PET","");
+            PipelineDraweeController controller = (PipelineDraweeController) Fresco.newDraweeControllerBuilder()
+                    .setUri(urlPet)
+                    .setOldController(svPet.getController())
+                    .setAutoPlayAnimations(true) //自动播放gif动画
+                    .build();
+            svPet.setController(controller);
+        }
+
         getPetPermission(0);
         return view;
     }
@@ -283,6 +298,7 @@ public class HomeFragment extends BaseFragment {
 
                                 petUrl = BASE_RESOURCE_URL + studentInfo.getData().getChongwu().getChongwu_info().getImg();
 
+                                PreferencesUtils.putString(getActivity(), "URL_PET",petUrl);
                                 showGif(svPet, petUrl);
                                 svPet.setOnClickListener(new View.OnClickListener() {
                                     @Override
@@ -334,6 +350,7 @@ public class HomeFragment extends BaseFragment {
     };
 
     private void showGif(SimpleDraweeView sv, String url) {
+
         PipelineDraweeController controller = (PipelineDraweeController) Fresco.newDraweeControllerBuilder()
                 .setUri(url)
                 .setOldController(sv.getController())
@@ -548,12 +565,16 @@ public class HomeFragment extends BaseFragment {
         layoutReport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), StudentReportActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putInt("reportRealPay", currReportInfo.reportRealPay);
-                bundle.putInt("reportPrice", currReportInfo.reportPrice);
-                bundle.putBoolean("isUserPaySuccess", currReportInfo.isUserPaySuccess);
-                intent.putExtras(bundle);
+//                Intent intent = new Intent(getActivity(), StudentReportActivity.class);
+//                Bundle bundle = new Bundle();
+//                bundle.putInt("reportRealPay", currReportInfo.reportRealPay);
+//                bundle.putInt("reportPrice", currReportInfo.reportPrice);
+//                bundle.putBoolean("isUserPaySuccess", currReportInfo.isUserPaySuccess);
+//                intent.putExtras(bundle);
+//                startActivity(intent);
+                Intent intent = new Intent(getActivity(), ReportActivity.class);
+//                intent.putExtra("name",);
+                intent.putExtra("id",kidId);
                 startActivity(intent);
             }
         });
@@ -1238,33 +1259,6 @@ public class HomeFragment extends BaseFragment {
             dialog.setCancelable(true);
         }
 
-       /* createUpdateAppDialog(title, content, sweetAlertDialog -> {
-            // confirm
-            RxPermissions rxPermissions = new RxPermissions(getActivity());
-            rxPermissions.request(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                    .subscribe(success -> {
-                        if (success) {
-                            startDownloadAppService(downloadUrl);
-                            sweetAlertDialog.startDownload();
-                        } else {
-                            sweetAlertDialog.dismiss();
-                        }
-                    });
-        }, sweetAlertDialog -> {
-            // cancel
-            //sweetAlertDialog.dismiss();
-
-            if(qiangzhigengxin.equals("1")){
-                T.showShort(getActivity(), "请更新版本后重试");
-            }else {
-                sweetAlertDialog.dismiss();
-            }
-
-        }, sweetAlertDialog -> {
-            // cancel Download
-            sweetAlertDialog.dismiss();
-            stopDownloadAppService(downloadUrl);
-        });*/
     }
 
     private void startDownloadAppService(String downloadUrl) {

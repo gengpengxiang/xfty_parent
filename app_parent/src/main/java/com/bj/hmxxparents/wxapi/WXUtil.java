@@ -12,7 +12,9 @@ import com.bj.hmxxparents.R;
 import com.bj.hmxxparents.api.MLProperties;
 import com.bj.hmxxparents.utils.StringUtils;
 import com.douhao.game.Constants;
+import com.douhao.game.utils.Util;
 import com.tencent.mm.opensdk.modelmsg.SendMessageToWX;
+import com.tencent.mm.opensdk.modelmsg.WXImageObject;
 import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
 import com.tencent.mm.opensdk.modelmsg.WXWebpageObject;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
@@ -120,7 +122,7 @@ public class WXUtil {
      * 分享到微信
      * 1.朋友圈 0.微信
      */
-    public static void share(final Context context, final int type, String url, String title, String content,final String img) {
+    public static void share(final Context context, final int type, String url, String title, String content, final String img) {
 
         api = WXAPIFactory.createWXAPI(context, Constants.APP_DOUHAO_PARENT_ID, false);
 
@@ -134,20 +136,20 @@ public class WXUtil {
 
         msg.title = "幸福田园";
 
-        if(content==null|| StringUtils.isEmpty(content)){
+        if (content == null || StringUtils.isEmpty(content)) {
             msg.description = "顺天致性、仁智和美、多元幸福";
-        }else {
+        } else {
             msg.description = content;
         }
 
         Observable.create(new ObservableOnSubscribe<Bitmap>() {
             @Override
             public void subscribe(ObservableEmitter<Bitmap> e) throws Exception {
-                if(StringUtils.isEmpty(img)){
+                if (StringUtils.isEmpty(img)) {
                     Bitmap thumb = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher_small);
                     e.onNext(thumb);
                     e.onComplete();
-                }else {
+                } else {
 //                    Bitmap thumb =Bitmap.createScaledBitmap(GetLocalOrNetBitmap(img), 120, 120, true);//压缩Bitmap
 //                    e.onNext(thumb);
 //                    e.onComplete();
@@ -218,8 +220,43 @@ public class WXUtil {
                         api.sendReq(req);
                     }
                 });
+    }
+
+    public static void shareImgToSession(final Context context, Bitmap shareBmp,final String type) {
+        api = WXAPIFactory.createWXAPI(context, Constants.APP_DOUHAO_PARENT_ID, false);
+        if (!isWeixinAvilible(context)) {
+            Toast.makeText(context, "抱歉！您还没有安装微信", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        WXImageObject imgObject = new WXImageObject(shareBmp);
+        WXMediaMessage msg = new WXMediaMessage();
+        msg.mediaObject = imgObject;
+        // 设置缩略图
+        if (shareBmp != null && !shareBmp.isRecycled()) {
+            Bitmap thumbBmp = Bitmap.createScaledBitmap(shareBmp, shareBmp.getWidth() / 10,
+                    shareBmp.getHeight() / 10, true);
+            // msg.thumbData = Util.bmpToByteArray(thumbBmp, true);
+            msg.thumbData = Util.bmpToByteArray(thumbBmp, true);
+            shareBmp.recycle();
+        }
+        // 构造一个Req
+        SendMessageToWX.Req req = new SendMessageToWX.Req();
+        // transaction 字段用于唯一标示一个请求
+        req.transaction = buildTransaction("img");
+        req.message = msg;
 
 
+        if(type.equals("weixin")){
+            req.scene = SendMessageToWX.Req.WXSceneSession;
+        }else if(type.equals("pengyouquan")){
+            req.scene = SendMessageToWX.Req.WXSceneTimeline;
+        }
+
+
+
+        // 调用api接口发送数据到微信
+        api.sendReq(req);
     }
 
 }

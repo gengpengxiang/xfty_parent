@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_report1"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_marginTop="100dp"
+        android:paddingBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_layout_corner"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="徽章荣誉榜"
+            android:textColor="@color/text_blue_deep"
+            android:textSize="22sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_badge_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="70dp"
+                    android:layout_height="70dp">
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:background="@mipmap/ic_medal_silver">
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/iv_badge_2"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_centerInParent="true"
+                            fresco:actualImageScaleType="focusCrop"
+                            fresco:placeholderImage="@drawable/icon_default_photo"
+                            fresco:placeholderImageScaleType="focusCrop"
+                            fresco:roundAsCircle="true" />
+                    </RelativeLayout>
+
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_badge_num_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="55"
+                    android:textColor="@color/text_orange_deep"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_badge_name_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="李明李"
+                    android:textColor="@color/text_blue_light2"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_badge_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@mipmap/ic_medal_gold">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/iv_badge_1"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_centerInParent="true"
+                        fresco:actualImageScaleType="focusCrop"
+                        fresco:placeholderImage="@drawable/icon_default_photo"
+                        fresco:placeholderImageScaleType="focusCrop"
+                        fresco:roundAsCircle="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_badge_num_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="55"
+                    android:textColor="@color/text_orange_deep"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_badge_name_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="李明李明"
+                    android:textColor="@color/text_blue_light2"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_badge_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <FrameLayout
+
+                    android:layout_width="70dp"
+                    android:layout_height="70dp">
+
+                    <RelativeLayout
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:background="@mipmap/ic_medal_bronze">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/iv_badge_3"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            fresco:actualImageScaleType="focusCrop"
+                            fresco:placeholderImage="@drawable/icon_default_photo"
+                            fresco:placeholderImageScaleType="focusCrop"
+                            fresco:roundAsCircle="true" />
+                    </RelativeLayout>
+
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_badge_num_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="55"
+                    android:textColor="@color/text_orange_deep"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_badge_name_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="李明"
+                    android:textColor="@color/text_blue_light2"
+                    android:textSize="17sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:paddingBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_layout_corner"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="评价荣誉榜"
+            android:textColor="@color/text_blue_deep"
+            android:textSize="22sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_evaluation_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="70dp"
+                    android:layout_height="70dp">
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:background="@mipmap/ic_medal_silver">
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/iv_evaluation_2"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_centerInParent="true"
+                            fresco:actualImageScaleType="focusCrop"
+                            fresco:placeholderImage="@drawable/icon_default_photo"
+                            fresco:placeholderImageScaleType="focusCrop"
+                            fresco:roundAsCircle="true" />
+                    </RelativeLayout>
+
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_evaluation_num_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="55"
+                    android:textColor="@color/text_orange_deep"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_evaluation_name_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="李明李"
+                    android:textColor="@color/text_blue_light2"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_evaluation_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@mipmap/ic_medal_gold">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/iv_evaluation_1"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_centerInParent="true"
+                        fresco:actualImageScaleType="focusCrop"
+                        fresco:placeholderImage="@drawable/icon_default_photo"
+                        fresco:placeholderImageScaleType="focusCrop"
+                        fresco:roundAsCircle="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_evaluation_num_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="55"
+                    android:textColor="@color/text_orange_deep"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_evaluation_name_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="李明李明"
+                    android:textColor="@color/text_blue_light2"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_evaluation_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <FrameLayout
+
+                    android:layout_width="70dp"
+                    android:layout_height="70dp">
+
+                    <RelativeLayout
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:background="@mipmap/ic_medal_bronze">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/iv_evaluation_3"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            fresco:actualImageScaleType="focusCrop"
+                            fresco:placeholderImage="@drawable/icon_default_photo"
+                            fresco:placeholderImageScaleType="focusCrop"
+                            fresco:roundAsCircle="true" />
+                    </RelativeLayout>
+
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_evaluation_num_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="55"
+                    android:textColor="@color/text_orange_deep"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_evaluation_name_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="李明"
+                    android:textColor="@color/text_blue_light2"
+                    android:textSize="17sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

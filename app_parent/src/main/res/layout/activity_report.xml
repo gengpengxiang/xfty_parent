@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_root">
+
+    <com.bj.hmxxparents.widget.VerticalViewPager
+        android:id="@+id/mViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:overScrollMode="never" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp">
+
+        <RelativeLayout
+            android:id="@+id/bt_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+            <ImageView
+                android:id="@+id/header_img_back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_header_back" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFF"
+            android:textSize="@dimen/text_size_title" />
+
+        <RelativeLayout
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+            <ImageView
+                android:layout_marginRight="40dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/bt_share"
+                android:layout_width="24dp"
+                android:layout_height="22dp"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_report_share" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/fl_next"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/iv_next"
+            android:layout_width="24dp"
+            android:layout_height="22dp"
+            android:src="@mipmap/ic_report_up" />
+    </FrameLayout>
+</RelativeLayout>

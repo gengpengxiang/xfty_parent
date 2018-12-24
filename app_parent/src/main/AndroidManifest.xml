@@ -14,7 +14,7 @@
     <!-- 用于访问网络，网络定位需要上网 -->
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- 用于读取手机当前的状态 -->
-    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
+    <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
     <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!-- 读取扩展存储的数据 -->
@@ -27,17 +27,17 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <!-- 拨打电话 -->
     <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <!-- 手机定位信息，用来为语义等功能提供定位，提供更精准的服务 -->
     <!-- 定位信息是敏感信息，可通过Setting.setLocationEnable(false)关闭定位请求 -->
-    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
     <!-- 获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 -->
-    <!--<uses-permission android:name="android.permission.RECORD_AUDIO" />-->
-    <!--<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />-->
-    <!--<uses-permission android:name="android.permission.WAKE_LOCK" />-->
-    <!--<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />-->
-    <!--<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />-->
-    <!--<uses-permission android:name="android.permission.GET_TASKS" />-->
-
+    <!-- <uses-permission android:name="android.permission.RECORD_AUDIO" /> -->
+    <!-- <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" /> -->
+    <!-- <uses-permission android:name="android.permission.WAKE_LOCK" /> -->
+    <!-- <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /> -->
+    <!-- <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> -->
+    <!-- <uses-permission android:name="android.permission.GET_TASKS" /> -->
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -274,7 +274,8 @@
             android:name=".activity.ShareActivity"
             android:theme="@style/Theme.DialogActivity" />
         <activity android:name=".countryside.topic.PublishActivity" />
-        <activity android:name=".countryside.topic.TopicDetailActivity"></activity>
+        <activity android:name=".countryside.topic.TopicDetailActivity" />
+        <activity android:name=".report.ReportActivity"></activity>
     </application>
 
 </manifest>

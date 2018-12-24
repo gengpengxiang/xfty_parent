@@ -17,7 +17,7 @@
             android:id="@+id/layout_pet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <com.facebook.drawee.view.SimpleDraweeView
                 android:id="@+id/bg_pet"
@@ -65,7 +65,7 @@
             android:id="@+id/layout_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="invisible">
+            android:visibility="gone">
 
             <com.facebook.drawee.view.SimpleDraweeView
                 android:id="@+id/img_classBg"
@@ -456,7 +456,7 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:visibility="visible"
+            android:visibility="gone"
             android:id="@+id/layout_report"
             android:layout_marginTop="30px"
             android:background="@color/white"
