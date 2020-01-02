@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_fengchao2"
+    android:visibility="gone"
+    android:paddingTop="30dp"
+    android:layout_marginTop="5dp"
+    android:paddingBottom="30dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:background="@drawable/shape_layout_corner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <!-- 90枚徽章蜂巢图-->
+
+        <!--中间的徽章列 -->
+        <LinearLayout
+            android:id="@+id/layout_center"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v61"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v37"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v19"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v7"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v1"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" >
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/i2v0"
+                    android:layout_width="18dp"
+                    android:layout_height="25dp"
+                    android:background="@mipmap/ic_badge_logo"/>
+            </RelativeLayout>
+
+
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v4"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v13"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v28"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v49"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v76"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+        </LinearLayout>
+        <!--中间靠右侧的徽章列 -->
+        <LinearLayout
+            android:id="@+id/layout_right1"
+            android:layout_toRightOf="@+id/layout_center"
+            android:layout_marginLeft="@dimen/margin_badge_half2"
+            android:layout_marginTop="@dimen/height_badge_0.5_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v62"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v38"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v20"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v8"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v2"
+
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v3"
+
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v12"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v27"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v48"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v75"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_right2"
+            android:layout_toRightOf="@+id/layout_right1"
+            android:layout_marginLeft="@dimen/margin_badge_half2"
+            android:layout_marginTop="@dimen/height_badge2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v63"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v39"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v21"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v9"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v10"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v11"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v26"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v47"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v74"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_right3"
+            android:layout_toRightOf="@+id/layout_right2"
+            android:layout_marginLeft="@dimen/margin_badge_half2"
+            android:layout_marginTop="@dimen/height_badge_1.5_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v64"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v40"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v22"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v23"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v24"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v25"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v46"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v73"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_right4"
+        android:layout_toRightOf="@+id/layout_right3"
+        android:layout_marginLeft="@dimen/margin_badge_half2"
+        android:layout_marginTop="@dimen/height_badge_2.0_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v65"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v41"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v42"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v43"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v44"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v45"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v72"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_right5"
+        android:layout_toRightOf="@+id/layout_right4"
+        android:layout_marginLeft="@dimen/margin_badge_half2"
+        android:layout_marginTop="@dimen/height_badge_2.5_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v66"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v67"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v68"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v69"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v70"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v71"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+    </LinearLayout>
+        <!--中间靠左侧的徽章列 -->
+        <LinearLayout
+            android:id="@+id/layout_left1"
+            android:layout_toLeftOf="@+id/layout_center"
+            android:layout_marginRight="@dimen/margin_badge_half2"
+            android:layout_marginTop="@dimen/height_badge_0.5_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v90"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v60"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v36"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v18"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v6"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v5"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v14"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v29"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v50"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v77"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_left2"
+            android:layout_toLeftOf="@+id/layout_left1"
+            android:layout_marginRight="@dimen/margin_badge_half"
+            android:layout_marginTop="@dimen/height_badge2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v89"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v59"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v35"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v17"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v16"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v15"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v30"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v51"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v78"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_left3"
+            android:layout_toLeftOf="@+id/layout_left2"
+            android:layout_marginRight="@dimen/margin_badge_half2"
+            android:layout_marginTop="@dimen/height_badge_1.5_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v88"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v58"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v34"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v33"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v32"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v31"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v52"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+            <ImageView
+                android:alpha="@dimen/alpha_badge"
+                android:id="@+id/i2v79"
+                android:layout_width="@dimen/width_badge2"
+                android:layout_height="@dimen/height_badge2" />
+        </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_left4"
+        android:layout_toLeftOf="@+id/layout_left3"
+        android:layout_marginRight="@dimen/margin_badge_half2"
+        android:layout_marginTop="@dimen/height_badge_2.0_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v87"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v57"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v56"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v55"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v54"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v53"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v80"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_left5"
+        android:layout_toLeftOf="@+id/layout_left4"
+        android:layout_marginRight="@dimen/margin_badge_half2"
+        android:layout_marginTop="@dimen/height_badge_2.5_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v86"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v85"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v84"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v83"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v82"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+        <ImageView
+            android:alpha="@dimen/alpha_badge"
+            android:id="@+id/i2v81"
+            android:layout_width="@dimen/width_badge2"
+            android:layout_height="@dimen/height_badge2" />
+    </LinearLayout>
+
+</RelativeLayout>

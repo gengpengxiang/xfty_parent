@@ -107,6 +107,7 @@ public class BadgeActivity extends BaseActivity {
         initViews();
     }
 
+
     private void initViews() {
         userPhotoPath = PreferencesUtils.getString(this, MLProperties.BUNDLE_KEY_KID_IMG);
         userName = PreferencesUtils.getString(this, MLProperties.BUNDLE_KEY_KID_NAME);

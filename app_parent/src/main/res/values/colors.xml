@@ -42,6 +42,7 @@
     <color name="text_orange">#e58b19</color>
     <color name="text_orange2">#ea5400</color>
     <color name="text_orange_deep">#ec6232</color>
+    <color name="text_orange_deep2">#e7671d</color>
     <color name="text_blue_deep">#00549b</color>
     <color name="text_blue_light">#2f92d1</color>
     <color name="text_blue_light2">#328eec</color>
@@ -53,5 +54,10 @@
     <color name="color_bar_green">#59c675</color>
     <color name="color_line_green">#75c621</color>
     <color name="color_bar_yellow">#dfd826</color>
+
+    <color name="color_honey_bar">#f9c593</color>
+    <color name="color_honey">#f5c825</color>
+    <color name="color_honey_bar_stroke">#e96a25</color>
+    <color name="color_calendar_green">#4edb6a</color>
 
 </resources>

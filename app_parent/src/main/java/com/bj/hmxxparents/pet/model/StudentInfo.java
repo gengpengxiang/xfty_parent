@@ -58,6 +58,16 @@ public class StudentInfo {
          * zhuanxiang : 0
          * chongwu_status : 1
          * chongwu : {"chongwu_info":{"id":"1","name":"西西","img":"chongwu/1.png","updatetime":"2018-11-03 09:52:18","img_s":"chongwu/1.png","grade":"1","shuoming":"说明1"},"chongwu_guli":[{"id":"1","content":"好好学习天天向上","chongwu_id":"1","updatetime":"2018-07-23 15:32:51"},{"id":"2","content":"人生要有理想","chongwu_id":"1","updatetime":"2018-07-23 15:33:10"},{"id":"3","content":"梅花香自苦寒来","chongwu_id":"1","updatetime":"2018-07-24 16:32:18"},{"id":"4","content":"拥有梦想\\n只是一种智力，\\n实现梦想\\n才是一种能力。","chongwu_id":"1","updatetime":"2018-07-25 16:30:57"}]}
+         *
+         * "xuexibaogao_title": "2018年秋季学习报告",
+         * "xuexibaogao_status": "1"
+         * "xuexibaogao_yingyustatus":"0"
+         * "yemian": "1",
+         *"yuedudaka_title": "阅读打卡全新上线啦！",
+         *"yuedudaka_status": "1"
+         *"yuedudaka_map": "1"
+         * ""huodong_num:"0"
+         * huodong_status:0
          */
 
         private int score;
@@ -74,6 +84,89 @@ public class StudentInfo {
         private String zhuanxiang;
         private int chongwu_status;
         private ChongwuBean chongwu;
+
+        private String xuexibaogao_title;
+        private String xuexibaogao_status;
+        private String xuexibaogao_yingyustatus;
+
+        private String yemian;
+        private String yuedudaka_title;
+        private String yuedudaka_status;
+        private String yuedudaka_map;
+        private String huodong_num;
+        private int huodong_status;
+
+        public int getHuodong_status() {
+            return huodong_status;
+        }
+
+        public void setHuodong_status(int huodong_status) {
+            this.huodong_status = huodong_status;
+        }
+
+        public String getHuodong_num() {
+            return huodong_num;
+        }
+
+        public void setHuodong_num(String huodong_num) {
+            this.huodong_num = huodong_num;
+        }
+
+        public String getYuedudaka_map() {
+            return yuedudaka_map;
+        }
+
+        public void setYuedudaka_map(String yuedudaka_map) {
+            this.yuedudaka_map = yuedudaka_map;
+        }
+
+        public String getYemian() {
+            return yemian;
+        }
+
+        public void setYemian(String yemian) {
+            this.yemian = yemian;
+        }
+
+        public String getYuedudaka_title() {
+            return yuedudaka_title;
+        }
+
+        public void setYuedudaka_title(String yuedudaka_title) {
+            this.yuedudaka_title = yuedudaka_title;
+        }
+
+        public String getYuedudaka_status() {
+            return yuedudaka_status;
+        }
+
+        public void setYuedudaka_status(String yuedudaka_status) {
+            this.yuedudaka_status = yuedudaka_status;
+        }
+
+        public String getXuexibaogao_yingyustatus() {
+            return xuexibaogao_yingyustatus;
+        }
+
+        public void setXuexibaogao_yingyustatus(String xuexibaogao_yingyustatus) {
+            this.xuexibaogao_yingyustatus = xuexibaogao_yingyustatus;
+        }
+
+        public String getXuexibaogao_title() {
+            return xuexibaogao_title;
+        }
+
+        public void setXuexibaogao_title(String xuexibaogao_title) {
+            this.xuexibaogao_title = xuexibaogao_title;
+        }
+
+        public String getXuexibaogao_status() {
+            return xuexibaogao_status;
+        }
+
+        public void setXuexibaogao_status(String xuexibaogao_status) {
+            this.xuexibaogao_status = xuexibaogao_status;
+        }
 
         public int getScore() {
             return score;

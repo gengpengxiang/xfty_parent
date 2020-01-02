@@ -2,6 +2,7 @@ package com.bj.hmxxparents.countryside.topic;
 
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -18,6 +19,7 @@ import com.bj.hmxxparents.R;
 import com.bj.hmxxparents.activity.LoginActivity;
 import com.bj.hmxxparents.api.MLProperties;
 import com.bj.hmxxparents.countryside.honorroll.adapter.SpaceItemDecoration;
+import com.bj.hmxxparents.countryside.topic.adapter.SuyangAdapter;
 import com.bj.hmxxparents.countryside.topic.adapter.TopicDetailAdapter;
 import com.bj.hmxxparents.countryside.topic.model.AgreeResult;
 import com.bj.hmxxparents.countryside.topic.model.TopicDetail;
@@ -99,6 +101,10 @@ public class TopicDetailActivity extends BaseActivity implements IViewTopicDetai
     private BGANinePhotoLayout mCurrentClickNpl;
     private String url_share,title_share,content_share,img_share;
 
+    private RecyclerView childRecyclerView;
+    private SuyangAdapter suyangAdapter;
+    private List<TopicDetail.DataBean.HuodongSuyangBean> suyangList = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -163,6 +169,12 @@ public class TopicDetailActivity extends BaseActivity implements IViewTopicDetai
                 showDialog();
             }
         });
+
+        childRecyclerView = (RecyclerView)headerView.findViewById(R.id.childRecyclerView);
+        childRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+
+        suyangAdapter = new SuyangAdapter(R.layout.recycler_item_suyang, suyangList);
+        childRecyclerView.setAdapter(suyangAdapter);
     }
 
     private void initViews() {
@@ -311,6 +323,12 @@ public class TopicDetailActivity extends BaseActivity implements IViewTopicDetai
             }else {
                 content_share = "";
             }
+
+
+            childRecyclerView.setVisibility(View.VISIBLE);
+            suyangList.clear();
+            suyangList.addAll(bean.getHuodong_suyang());
+            suyangAdapter.notifyDataSetChanged();
 
         }
     }

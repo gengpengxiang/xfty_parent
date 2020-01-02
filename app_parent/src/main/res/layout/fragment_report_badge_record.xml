@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/bg_report1">
+
+    <TextView
+        android:textColor="@color/text_blue_deep"
+        android:layout_marginTop="80dp"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:text="徽章记录"
+        android:id="@+id/tv_report_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/tv_report_name"
+        android:background="@drawable/shape_layout_corner"
+        android:layout_marginBottom="80dp"
+        android:id="@+id/mRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</RelativeLayout>

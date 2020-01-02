@@ -46,8 +46,8 @@
 
             <com.facebook.drawee.view.SimpleDraweeView
                 android:id="@+id/sv_badge"
-                android:layout_width="191px"
-                android:layout_height="191px"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 fresco:actualImageScaleType="focusCrop"
                 fresco:placeholderImageScaleType="focusCrop"/>
 
@@ -56,8 +56,8 @@
                 android:layout_marginTop="20dp"
                 android:layout_centerHorizontal="true"
                 android:background="@mipmap/ic_honor_roll"
-                android:layout_width="375px"
-                android:layout_height="282px" />
+                android:layout_width="120dp"
+                android:layout_height="90dp" />
 
             <TextView
                 android:id="@+id/tv_date"
@@ -103,8 +103,8 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="-10dp"
                         android:layout_below="@+id/tv_score1"
-                        android:layout_width="169px"
-                        android:layout_height="169px"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:background="@mipmap/ic_medal_silver">
                         <com.facebook.drawee.view.SimpleDraweeView
                             android:layout_centerInParent="true"
@@ -131,8 +131,8 @@
                         android:singleLine="true"
                         android:gravity="center"
                         android:text="100"
-                        android:layout_width="86px"
-                        android:layout_height="78px"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:background="@mipmap/ic_shield_silver"/>
 
                     <TextView
@@ -160,8 +160,8 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="-10dp"
                         android:layout_below="@+id/tv_score2"
-                        android:layout_width="169px"
-                        android:layout_height="169px"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:background="@mipmap/ic_medal_gold">
                         <com.facebook.drawee.view.SimpleDraweeView
                             android:layout_centerInParent="true"
@@ -188,8 +188,8 @@
                         android:singleLine="true"
                         android:gravity="center"
                         android:text="100"
-                        android:layout_width="86px"
-                        android:layout_height="78px"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:background="@mipmap/ic_shield_gold"/>
 
                     <TextView
@@ -215,8 +215,8 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="-10dp"
                         android:layout_below="@+id/tv_score3"
-                        android:layout_width="169px"
-                        android:layout_height="169px"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:background="@mipmap/ic_medal_bronze">
                         <com.facebook.drawee.view.SimpleDraweeView
                             android:layout_centerInParent="true"
@@ -243,8 +243,8 @@
                         android:singleLine="true"
                         android:gravity="center"
                         android:text="1000"
-                        android:layout_width="86px"
-                        android:layout_height="78px"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:background="@mipmap/ic_shield_bronze"/>
 
                     <TextView
@@ -282,8 +282,8 @@
                 <ImageView
                     android:layout_marginLeft="30dp"
                     android:id="@+id/iv_qrcode"
-                    android:layout_width="212px"
-                    android:layout_height="212px"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
                     android:scaleType="fitXY"
                     android:background="@mipmap/ic_qrcode_app"/>
 

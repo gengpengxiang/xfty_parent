@@ -3,6 +3,7 @@ package com.bj.hmxxparents.widget;
 import android.app.Dialog;
 import android.content.Context;
 import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -57,6 +58,28 @@ public class CustomPopDialog extends Dialog {
             return dialog;
         }
 
+        public CustomPopDialog create(int LayoutId,int gravity) {
+            LayoutInflater inflater = (LayoutInflater) context
+                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            final CustomPopDialog dialog = new CustomPopDialog(context, R.style.Dialog);
+            View layout = inflater.inflate(LayoutId, null);
+            dialog.addContentView(layout, new LayoutParams(
+                    android.view.ViewGroup.LayoutParams.WRAP_CONTENT
+                    , android.view.ViewGroup.LayoutParams.WRAP_CONTENT));
+            dialog.setContentView(layout);
+            //add
+            Window dialogWindow = dialog.getWindow();
+            LayoutParams p = dialogWindow.getAttributes();
+//            int width =getScreenWidth(context);
+//            int height = getScreenHeight(context);
+//            p.height = (int) (height * 0.25); // 高度设置为屏幕的0.6，根据实际情况调整
+//            p.width = (int) (width * 0.7); // 宽度设置为屏幕的0.65，根据实际情况调整
+//            dialogWindow.setAttributes(p);
+            dialogWindow.setGravity(Gravity.RIGHT);
+
+            return dialog;
+        }
+
 
         public CustomPopDialog create(int LayoutId,double w) {
             LayoutInflater inflater = (LayoutInflater) context
@@ -74,6 +97,27 @@ public class CustomPopDialog extends Dialog {
             int height = getScreenHeight(context);
             //p.height = (int) (height * 0.25); // 高度设置为屏幕的0.6，根据实际情况调整
             p.width = (int) (width * w); // 宽度设置为屏幕的0.65，根据实际情况调整
+            dialogWindow.setAttributes(p);
+
+            return dialog;
+        }
+
+        public CustomPopDialog create3(int LayoutId,double h) {
+            LayoutInflater inflater = (LayoutInflater) context
+                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            final CustomPopDialog dialog = new CustomPopDialog(context, R.style.Dialog);
+            View layout = inflater.inflate(LayoutId, null);
+            dialog.addContentView(layout, new LayoutParams(
+                    android.view.ViewGroup.LayoutParams.WRAP_CONTENT
+                    , android.view.ViewGroup.LayoutParams.WRAP_CONTENT));
+            dialog.setContentView(layout);
+            //add
+            Window dialogWindow = dialog.getWindow();
+            LayoutParams p = dialogWindow.getAttributes();
+            int width =getScreenWidth(context);
+            int height = getScreenHeight(context);
+            p.height = (int) (height * h); // 高度设置为屏幕的0.6，根据实际情况调整
+//            p.width = (int) (width * w); // 宽度设置为屏幕的0.65，根据实际情况调整
             dialogWindow.setAttributes(p);
 
             return dialog;

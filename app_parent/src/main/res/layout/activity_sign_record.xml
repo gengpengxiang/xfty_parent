@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.bj.hmxxparents.read.SignRecordActivity">
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="0dp"
+        android:paddingBottom="10dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:textColor="@color/text_white"
+            android:textSize="20sp"
+            android:text="打卡记录"
+            android:background="@mipmap/bg_sign_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/bt_calendar_last"
+                android:src="@mipmap/ic_arrow_left"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="@color/text_orange_deep"
+                android:id="@+id/tv_calendar_title"
+                android:text="2019年13月"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/bt_calendar_next"
+                android:src="@mipmap/ic_arrow_right"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <com.bj.hmxxparents.read.calendar.ZWCalendarView
+            android:paddingRight="5dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:calendarTextSize="14sp"
+            app:isShowLunar="false"
+            app:isShowOtherMonth="false"
+            app:limitFutureMonth="true"
+            app:lunarTextSize="9sp"
+            app:todayColor="@color/color_calendar_green"
+            app:todayTextColor="@color/text_white"
+            app:selectColor="@color/bg_gray"
+            app:signIconSuccessId="@mipmap/ic_record_success"
+            app:signTextColor="#000000"
+            app:calendarTextColor="#000000"
+            app:weekTextColor="#000000"
+            app:weekTextSize="13sp"/>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:background="@color/bg_gray"
+        android:layout_width="10dp"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/mSmartRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mRecyclerView"
+                android:background="@color/bg_gray"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:id="@+id/bt_close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:background="@mipmap/ic_read_close" />
+
+    </RelativeLayout>
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/blackView"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

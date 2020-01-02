@@ -12,7 +12,7 @@ public class TopicDetail {
     /**
      * ret : 1
      * msg : 查询成功
-     * data : {"tianyuanid":"3","teacher_img":"bd286adc65af02d6b474564831eaa09a.jpeg","teacher_name":"159","teacher_type":"2","date":"2018-11-22 17:50:47","pageview":"4","dianzan_status":1,"dianzannum":"1","commentnum":"2","fenxiangnum":"0","content":[{"content":"1111","ordernumber":"1"}],"img":[{"img":"1111.png","ordernumber":"2"}],"huifu_list":[{"name":"幸福博士","time":"2018-11-22 18:27:21","huifu_content":"wwwwww"},{"name":"幸福博士","time":"2018-11-22 18:06:40","huifu_content":"wwwwww"}]}
+     * data : {"tianyuanid":"115","teacher_img":"01342eb49f20c6d87890e034e2132619.jpeg","teacher_name":"米多其","dongtai_del":"0","date":"2019-10-30 18:06","pageview":"22","dianzan_status":0,"dianzannum":"0","commentnum":"1","fenxiangnum":"0","fenxiangurl":"http://testxixin.gamepku.com/index.php/tianyuan_ex/tianyuanfenxiang?tianyuanid=115","content":[{"content":"5rWL6K+V","ordernumber":"1"}],"img":[{"img":"29a27cebe3654de2d09f21dba391089a.jpg","ordernumber":"2"}],"huifu_list":[{"name":"米多其爸爸","img":"01342eb49f20c6d87890e034e2132619.jpeg","time":"2019-10-31 16:40","huifu_content":"5Yqg5rK5"}],"huodong_suyang":[{"tianyuan_id":"115","code":"1","name":"运动健将","huodong_code":"1"}]}
      */
 
     private String ret;
@@ -45,27 +45,27 @@ public class TopicDetail {
 
     public static class DataBean {
         /**
-         * tianyuanid : 3
-         * teacher_img : bd286adc65af02d6b474564831eaa09a.jpeg
-         * teacher_name : 159
-         * teacher_type : 2
-         * date : 2018-11-22 17:50:47
-         * pageview : 4
-         * dianzan_status : 1
-         * dianzannum : 1
-         * commentnum : 2
+         * tianyuanid : 115
+         * teacher_img : 01342eb49f20c6d87890e034e2132619.jpeg
+         * teacher_name : 米多其
+         * dongtai_del : 0
+         * date : 2019-10-30 18:06
+         * pageview : 22
+         * dianzan_status : 0
+         * dianzannum : 0
+         * commentnum : 1
          * fenxiangnum : 0
-         * fenxiangurl: ""
-         * dongtai_del: ""
-         * content : [{"content":"1111","ordernumber":"1"}]
-         * img : [{"img":"1111.png","ordernumber":"2"}]
-         * huifu_list : [{"name":"幸福博士","time":"2018-11-22 18:27:21","huifu_content":"wwwwww"},{"name":"幸福博士","time":"2018-11-22 18:06:40","huifu_content":"wwwwww"}]
+         * fenxiangurl : http://testxixin.gamepku.com/index.php/tianyuan_ex/tianyuanfenxiang?tianyuanid=115
+         * content : [{"content":"5rWL6K+V","ordernumber":"1"}]
+         * img : [{"img":"29a27cebe3654de2d09f21dba391089a.jpg","ordernumber":"2"}]
+         * huifu_list : [{"name":"米多其爸爸","img":"01342eb49f20c6d87890e034e2132619.jpeg","time":"2019-10-31 16:40","huifu_content":"5Yqg5rK5"}]
+         * huodong_suyang : [{"tianyuan_id":"115","code":"1","name":"运动健将","huodong_code":"1"}]
          */
 
         private String tianyuanid;
         private String teacher_img;
         private String teacher_name;
-        private String teacher_type;
+        private String dongtai_del;
         private String date;
         private String pageview;
         private int dianzan_status;
@@ -73,26 +73,10 @@ public class TopicDetail {
         private String commentnum;
         private String fenxiangnum;
         private String fenxiangurl;
-        private String dongtai_del;
         private List<ContentBean> content;
         private List<ImgBean> img;
         private List<HuifuListBean> huifu_list;
-
-        public String getFenxiangurl() {
-            return fenxiangurl;
-        }
-
-        public String getDongtai_del() {
-            return dongtai_del;
-        }
-
-        public void setDongtai_del(String dongtai_del) {
-            this.dongtai_del = dongtai_del;
-        }
-
-        public void setFenxiangurl(String fenxiangurl) {
-            this.fenxiangurl = fenxiangurl;
-        }
+        private List<HuodongSuyangBean> huodong_suyang;
 
         public String getTianyuanid() {
             return tianyuanid;
@@ -118,12 +102,12 @@ public class TopicDetail {
             this.teacher_name = teacher_name;
         }
 
-        public String getTeacher_type() {
-            return teacher_type;
+        public String getDongtai_del() {
+            return dongtai_del;
         }
 
-        public void setTeacher_type(String teacher_type) {
-            this.teacher_type = teacher_type;
+        public void setDongtai_del(String dongtai_del) {
+            this.dongtai_del = dongtai_del;
         }
 
         public String getDate() {
@@ -174,6 +158,14 @@ public class TopicDetail {
             this.fenxiangnum = fenxiangnum;
         }
 
+        public String getFenxiangurl() {
+            return fenxiangurl;
+        }
+
+        public void setFenxiangurl(String fenxiangurl) {
+            this.fenxiangurl = fenxiangurl;
+        }
+
         public List<ContentBean> getContent() {
             return content;
         }
@@ -198,9 +190,17 @@ public class TopicDetail {
             this.huifu_list = huifu_list;
         }
 
+        public List<HuodongSuyangBean> getHuodong_suyang() {
+            return huodong_suyang;
+        }
+
+        public void setHuodong_suyang(List<HuodongSuyangBean> huodong_suyang) {
+            this.huodong_suyang = huodong_suyang;
+        }
+
         public static class ContentBean {
             /**
-             * content : 1111
+             * content : 5rWL6K+V
              * ordernumber : 1
              */
 
@@ -226,7 +226,7 @@ public class TopicDetail {
 
         public static class ImgBean {
             /**
-             * img : 1111.png
+             * img : 29a27cebe3654de2d09f21dba391089a.jpg
              * ordernumber : 2
              */
 
@@ -252,24 +252,16 @@ public class TopicDetail {
 
         public static class HuifuListBean {
             /**
-             * name : 幸福博士
-             * time : 2018-11-22 18:27:21
-             * img:"
-             * huifu_content : wwwwww
+             * name : 米多其爸爸
+             * img : 01342eb49f20c6d87890e034e2132619.jpeg
+             * time : 2019-10-31 16:40
+             * huifu_content : 5Yqg5rK5
              */
 
             private String name;
-            private String time;
             private String img;
+            private String time;
             private String huifu_content;
-
-            public String getImg() {
-                return img;
-            }
-
-            public void setImg(String img) {
-                this.img = img;
-            }
 
             public String getName() {
                 return name;
@@ -277,6 +269,14 @@ public class TopicDetail {
 
             public void setName(String name) {
                 this.name = name;
+            }
+
+            public String getImg() {
+                return img;
+            }
+
+            public void setImg(String img) {
+                this.img = img;
             }
 
             public String getTime() {
@@ -293,6 +293,52 @@ public class TopicDetail {
 
             public void setHuifu_content(String huifu_content) {
                 this.huifu_content = huifu_content;
+            }
+        }
+
+        public static class HuodongSuyangBean {
+            /**
+             * tianyuan_id : 115
+             * code : 1
+             * name : 运动健将
+             * huodong_code : 1
+             */
+
+            private String tianyuan_id;
+            private String code;
+            private String name;
+            private String huodong_code;
+
+            public String getTianyuan_id() {
+                return tianyuan_id;
+            }
+
+            public void setTianyuan_id(String tianyuan_id) {
+                this.tianyuan_id = tianyuan_id;
+            }
+
+            public String getCode() {
+                return code;
+            }
+
+            public void setCode(String code) {
+                this.code = code;
+            }
+
+            public String getName() {
+                return name;
+            }
+
+            public void setName(String name) {
+                this.name = name;
+            }
+
+            public String getHuodong_code() {
+                return huodong_code;
+            }
+
+            public void setHuodong_code(String huodong_code) {
+                this.huodong_code = huodong_code;
             }
         }
     }

@@ -253,14 +253,20 @@ public class TopicFragment extends BaseFragment implements IViewTopic {
             mSmartRefreshLayout.finishLoadmore();
         }
 
-        Topic topic = JSON.parseObject(result, new TypeReference<Topic>() {
-        });
-        if (topic.getRet().equals("1")) {
-            if (currentPage == 0) {
-                topicList.clear();
+        try {
+
+            Topic topic = JSON.parseObject(result, new TypeReference<Topic>() {
+            });
+            if (topic.getRet().equals("1")) {
+                if (currentPage == 0) {
+                    topicList.clear();
+                }
+                topicList.addAll(topic.getData());
+                adapter.notifyDataSetChanged();
             }
-            topicList.addAll(topic.getData());
-            adapter.notifyDataSetChanged();
+
+        }catch (Exception e){
+
         }
     }
 

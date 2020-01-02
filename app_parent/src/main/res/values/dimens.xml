@@ -13,4 +13,31 @@
     <dimen name="text_size_menu">16sp</dimen>
     <dimen name="text_size_standard">14sp</dimen>
     <dimen name="text_size_small">11sp</dimen>
+
+    <!--蜂巢报告页36枚-->
+    <dimen name="width_badge">46dp</dimen>
+    <dimen name="height_badge">40dp</dimen>
+    <dimen name="width_badge_half">23dp</dimen>
+    <dimen name="height_badge_half">20dp</dimen>
+    <dimen name="height_badge_0.5">20dp</dimen>
+    <dimen name="height_badge_1.5">60dp</dimen>
+    <dimen name="margin_badge_half">-9dp</dimen>
+    <!--蜂巢报告页90枚-->
+    <dimen name="width_badge2">34dp</dimen>
+    <dimen name="height_badge2">28dp</dimen>
+    <dimen name="width_badge_half2">17dp</dimen>
+    <dimen name="height_badge_half2">14dp</dimen>
+    <dimen name="height_badge_0.5_2">14dp</dimen>
+    <dimen name="height_badge_1.5_2">42dp</dimen>
+    <dimen name="height_badge_2.0_2">56dp</dimen>
+    <dimen name="height_badge_2.5_2">70dp</dimen>
+    <dimen name="margin_badge_half2">-9dp</dimen>
+
+    <dimen name="alpha_badge">0.1</dimen>
+
+    <dimen name="photo_city_width">40dp</dimen>
+    <dimen name="photo_city_height">35dp</dimen>
+    <dimen name="photo_city_lock">20dp</dimen>
+    <!--阅读界面的城市相关-->
+    <dimen name="photo_city_maxWidth">40dp</dimen>
 </resources>

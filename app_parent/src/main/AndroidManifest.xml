@@ -38,6 +38,9 @@
     <!-- <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /> -->
     <!-- <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> -->
     <!-- <uses-permission android:name="android.permission.GET_TASKS" /> -->
+
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -220,6 +223,12 @@
         <meta-data
             android:name="design_height"
             android:value="1920" />
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="360" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="640" />
 
         <!-- 友盟相关 -->
         <meta-data
@@ -262,20 +271,70 @@
 
         <activity
             android:name=".activity.BadgeActivity"
-            android:launchMode="singleTop" />
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".pet.view.PetALLActivity"
-            android:launchMode="singleTop" />
-        <activity android:name=".email.EmailActivity" />
-        <activity android:name=".email.EditActivity" />
-        <activity android:name=".email.EmailDetailActivity" />
-        <activity android:name=".activity.GaijinDetailActivity" />
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".email.EmailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".email.EditActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".email.EmailDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.GaijinDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".activity.ShareActivity"
             android:theme="@style/Theme.DialogActivity" />
-        <activity android:name=".countryside.topic.PublishActivity" />
-        <activity android:name=".countryside.topic.TopicDetailActivity" />
-        <activity android:name=".report.ReportActivity"></activity>
+        <activity android:name=".countryside.topic.PublishActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".countryside.topic.TopicDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".report.term.ReportTermActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".report.study.ReportStudyActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".read.ReadActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".read.ReadActivity2"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".read.SignRecordActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".read.ReadDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".comment.CommentActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".huodong.HuodongActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity android:name=".huodong.HuodongDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

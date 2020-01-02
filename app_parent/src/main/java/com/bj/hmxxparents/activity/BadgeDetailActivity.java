@@ -332,7 +332,8 @@ public class BadgeDetailActivity extends BaseActivity {
         }
 
         if (mTabDataList.size() <= minTabSize) {
-            mTabLayout.setTabMode(TabLayout.MODE_FIXED);
+            //mTabLayout.setTabMode(TabLayout.MODE_FIXED);
+            mTabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
         } else {
             mTabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
         }

@@ -14,9 +14,23 @@
         android:gravity="top"
         android:id="@+id/et"
         android:background="@null"
-        android:hint="发布通知或感想..."
+        android:hint="发布通知或感想...（不少于15字）"
         android:layout_width="match_parent"
         android:layout_height="200dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/mRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:id="@+id/mTagFlowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        android:padding="10dp"
+        app:max_lines="4"
+        app:max_select="3" />
 
     <View
         android:background="@color/bg_gray"

@@ -259,6 +259,9 @@ public class LmsDataService {
         LL.i("关联学生：" + parseUrl);
         JSONObject resultObject = new JSONObject(HttpUtilService.getJsonByUrl(parseUrl));
 
+        String abc = HttpUtilService.getJsonByUrl(parseUrl);
+        Log.e("abc",abc);
+
         if (resultObject.has("result")) {
             String errorCode = resultObject.optString("result");
             String messaage = resultObject.optString("error");

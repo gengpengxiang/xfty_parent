@@ -37,4 +37,10 @@
 
     <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
     <string name="str_report_protocol">《<u>订阅服务协议</u>》</string>
+
+    <string name="sign_record"><u>打卡记录</u></string>
+
+    <string name="read_shuoming">每天阅读打卡集蜂蜜每天阅读打卡集蜂蜜每天阅读打卡集蜂蜜每天阅读打卡集蜂蜜每天阅读打卡集蜂蜜每天阅读打卡集蜂蜜每天阅读打卡集蜂蜜每天阅读打卡集蜂蜜每天阅读打卡集蜂蜜每天阅读打卡集蜂蜜每天阅读打卡集蜂蜜每天阅读打卡集蜂蜜每天阅读打卡集蜂蜜每天阅读打卡集蜂蜜每天阅读打卡集蜂蜜每天阅读打卡集蜂蜜</string>
+
+    <string name="read_shuoming2">恭喜您通过不懈的努力，最后成功到达上海，完美结束了长江之旅！当下次您再进入阅读打卡栏目时，我们将会为您开启全新的旅程！</string>
 </resources>

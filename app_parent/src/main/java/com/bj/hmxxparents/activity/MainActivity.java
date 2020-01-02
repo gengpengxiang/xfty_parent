@@ -37,6 +37,7 @@ import com.bj.hmxxparents.utils.IMMLeaks;
 import com.bj.hmxxparents.utils.LL;
 import com.bj.hmxxparents.utils.LeakedUtils;
 import com.bj.hmxxparents.utils.PreferencesUtils;
+import com.bj.hmxxparents.utils.ScreenUtils;
 import com.bj.hmxxparents.utils.StringUtils;
 import com.bj.hmxxparents.widget.CustomViewPager;
 import com.hyphenate.chat.EMClient;
@@ -128,7 +129,9 @@ public class MainActivity extends BaseActivity {
         initDonation();
         initData();
 
-
+        int width = ScreenUtils.getScreenWidth(this);
+        int height = ScreenUtils.getScreenHeight(this);
+        Log.e("宽度==", width + "高度=" + height);
     }
 
     private void initView() {

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_container"
+    android:orientation="vertical"
+    android:background="@mipmap/bg_report1">
+
+    <RelativeLayout
+        android:layout_marginBottom="15dp"
+        android:visibility="gone"
+        android:layout_marginTop="80dp"
+        android:id="@+id/layout_title3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_title1"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:text="恭喜你！"
+            android:textColor="@color/text_orange_deep2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_below="@+id/tv_title1"
+            android:id="@+id/tv_title2"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:text="在这个学期通过自己的努力"
+            android:textColor="@color/text_orange_deep2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_below="@+id/tv_title2"
+            android:id="@+id/tv_title3"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:text="获得了0枚徽章"
+            android:textColor="@color/text_orange_deep2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginBottom="15dp"
+        android:visibility="gone"
+        android:layout_marginTop="80dp"
+        android:id="@+id/tv_title0"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:text="获得了0枚徽章"
+        android:textColor="@color/text_orange_deep2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <include layout="@layout/layout_report_fengchao1" />
+
+    <include layout="@layout/layout_report_fengchao2" />
+
+
+</LinearLayout>

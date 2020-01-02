@@ -135,22 +135,41 @@ public class TopicPublishPresenter extends Presenter {
 
     }
 
-    public void publishTopic(final String userphone,final String tianyuan_content,final String tianyuan_img){
+    public void publishTopic(final String userphone,final String tianyuan_content,final String tianyuan_img,final String huodong_code,final String suyang_code){
 
         Observable.create(new ObservableOnSubscribe<String>() {
             @Override
             public void subscribe(ObservableEmitter<String> e) throws Exception {
+//                OkGo.<String>post(BASE_URL + "tianyuan/tianyuanadd")
+//                        .params("appkey", MLConfig.HTTP_APP_KEY)
+//                        .params("userphone",userphone)
+//                        .params("tianyuan_content",tianyuan_content)
+//                        .params("tianyuan_img",tianyuan_img)
+//                        .execute(new StringCallback() {
+//                            @Override
+//                            public void onSuccess(Response<String> response) {
+//
+//                                String str = response.body().toString();
+//                                Log.e("发布动态结果",str);
+//                                e.onNext(str);
+//                                e.onComplete();
+//
+//                            }
+//                        });
                 OkGo.<String>post(BASE_URL + "tianyuan/tianyuanadd")
                         .params("appkey", MLConfig.HTTP_APP_KEY)
                         .params("userphone",userphone)
                         .params("tianyuan_content",tianyuan_content)
                         .params("tianyuan_img",tianyuan_img)
+                        .params("huodong","1")
+                        .params("huodong_code",huodong_code)
+                        .params("suyang_code",suyang_code)
                         .execute(new StringCallback() {
                             @Override
                             public void onSuccess(Response<String> response) {
 
                                 String str = response.body().toString();
-                                Log.e("发布动态结果",str);
+                                Log.e("发布活动动态结果",str);
                                 e.onNext(str);
                                 e.onComplete();
 

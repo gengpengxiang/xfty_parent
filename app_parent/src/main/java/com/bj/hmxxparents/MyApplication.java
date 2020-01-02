@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Environment;
+import android.os.StrictMode;
 import android.support.multidex.MultiDex;
 
 import com.bj.hmxxparents.countryside.topic.view.BGAGlideImageLoader3;
@@ -40,6 +41,10 @@ import java.util.LinkedList;
 import java.util.List;
 
 import cn.bingoogolapple.photopicker.imageloader.BGAImage;
+import io.reactivex.functions.Consumer;
+import io.reactivex.plugins.RxJavaPlugins;
+import me.jessyan.autosize.AutoSize;
+import me.jessyan.autosize.AutoSizeConfig;
 
 /**
  * Created by Administrator on 2016/11/25.
@@ -75,6 +80,20 @@ public class MyApplication extends Application {
 //        crashHandler.init(getApplicationContext());
 
         initOkGo();
+        AutoSizeConfig.getInstance().setCustomFragment(true);
+        AutoSize.initCompatMultiProcess(this);
+
+        RxJavaPlugins.setErrorHandler(new Consumer<Throwable>() {
+            @Override
+            public void accept(Throwable throwable) {
+                //异常处理
+            }
+        });
+
+        // android 7.0系统解决拍照的问题
+        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+        StrictMode.setVmPolicy(builder.build());
+        builder.detectFileUriExposure();
 
     }
 

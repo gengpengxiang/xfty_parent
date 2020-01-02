@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_report1"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <TextView
+        android:id="@+id/tv_report_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:text=""
+        android:textColor="@color/text_blue_deep"
+        android:textSize="24sp" />
+
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_layout_corner"
+        android:paddingBottom="16dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="16dp">
+
+        <LinearLayout
+            android:id="@+id/layout_legend1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:background="@color/color_line_blue" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:text="我的徽章"
+                android:textColor="@color/text_blue_light" />
+
+            <View
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginLeft="20dp"
+                android:background="@color/color_line_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:text="班级平均"
+                android:textColor="@color/color_line_green" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv_badge"
+            android:ems="1"
+            android:textSize="12sp"
+            android:maxEms="1"
+            android:text="徽章数"
+            android:textColor="@color/text_blue_light2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_toLeftOf="@+id/tv_month"
+            android:id="@+id/layout_chart_badge"
+            android:layout_toRightOf="@+id/tv_badge"
+            android:background="@mipmap/bg_report_xy"
+            android:layout_below="@+id/layout_legend1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart_badge"
+                android:layout_width="match_parent"
+                android:layout_height="90dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_toLeftOf="@+id/tv_month"
+            android:id="@+id/layout_month"
+            android:layout_toRightOf="@+id/tv_badge"
+            android:layout_below="@+id/layout_chart_badge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/text_blue_light2"
+                android:text="第一个月"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <TextView
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/text_blue_light2"
+                android:text="第二个月"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <TextView
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/text_blue_light2"
+                android:text="第三个月"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <TextView
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/text_blue_light2"
+                android:text="第四个月"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/layout_chart_badge"
+            android:id="@+id/tv_month"
+            android:text="月"
+            android:textSize="12sp"
+            android:textColor="@color/text_blue_light2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_layout_corner"
+        android:paddingBottom="16dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="16dp">
+
+        <LinearLayout
+            android:id="@+id/layout_legend2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:background="@color/color_bar_purple" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:text="我的评价"
+                android:textColor="@color/color_bar_purple" />
+
+            <View
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginLeft="20dp"
+                android:background="@color/color_line_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:text="班级平均分"
+                android:textColor="@color/color_line_green" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv_evaluation"
+            android:ems="1"
+            android:textSize="12sp"
+            android:maxEms="1"
+            android:text="评价"
+            android:textColor="@color/text_blue_light2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_toLeftOf="@+id/tv_month2"
+            android:id="@+id/layout_chart_evaluation"
+            android:layout_toRightOf="@+id/tv_evaluation"
+            android:background="@mipmap/bg_report_xy"
+            android:layout_below="@+id/layout_legend2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart_evaluation"
+                android:layout_width="match_parent"
+                android:layout_height="90dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_toLeftOf="@+id/tv_month2"
+            android:id="@+id/layout_month2"
+            android:layout_toRightOf="@+id/tv_evaluation"
+            android:layout_below="@+id/layout_chart_evaluation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/text_blue_light2"
+                android:text="第一个月"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <TextView
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/text_blue_light2"
+                android:text="第二个月"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <TextView
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/text_blue_light2"
+                android:text="第三个月"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <TextView
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/text_blue_light2"
+                android:text="第四个月"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/layout_chart_evaluation"
+            android:id="@+id/tv_month2"
+            android:text="月"
+            android:textSize="12sp"
+            android:textColor="@color/text_blue_light2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</LinearLayout>

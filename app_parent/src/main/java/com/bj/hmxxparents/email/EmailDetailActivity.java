@@ -50,12 +50,6 @@ public class EmailDetailActivity extends BaseActivity implements IViewReply {
     LinearLayout headerLlLeft;
     @BindView(R.id.layout_sanjiao)
     LinearLayout layoutSanjiao;
-    @BindView(R.id.tv_title)
-    TextView tvTitle;
-    @BindView(R.id.tv_date)
-    TextView tvDate;
-    @BindView(R.id.tv_content)
-    TextView tvContent;
     @BindView(R.id.mRecyclerView)
     RecyclerView mRecyclerView;
     @BindView(R.id.mSmartRefreshLayout)
@@ -73,6 +67,10 @@ public class EmailDetailActivity extends BaseActivity implements IViewReply {
     private String xinjianid;
     private int currentPage = 0;
     private String authorPhone;//动态发布者的手机号
+    private View headerView;
+    TextView tvTitle;
+    TextView tvDate;
+    TextView tvContent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,13 +88,18 @@ public class EmailDetailActivity extends BaseActivity implements IViewReply {
         xinjianid = getIntent().getStringExtra("xinjianid");
         initTitleBar();
 
+
+        initRecyclerHeaderView();
         presenter = new ReplyPresenter(this, this);
         presenter.getReply(xinjianid, currentPage);
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-//        mRecyclerView.addItemDecoration(new SpacesItemDecoration(2));
-
         adapter = new ReplyAdapter(R.layout.recycler_item_letter_reply, dataList);
+        adapter.addHeaderView(headerView);
+        adapter.setHeaderAndEmpty(true);
+
+
+
         mRecyclerView.setAdapter(adapter);
 
         mSmartRefreshLayout.setOnRefreshListener(new OnRefreshListener() {
@@ -113,6 +116,13 @@ public class EmailDetailActivity extends BaseActivity implements IViewReply {
                 presenter.getReply(xinjianid, currentPage);
             }
         });
+    }
+
+    private void initRecyclerHeaderView() {
+        headerView = getLayoutInflater().inflate(R.layout.recycler_header_email_detail, null);
+        tvTitle = (TextView) headerView.findViewById(R.id.tv_title);
+        tvDate = (TextView) headerView.findViewById(R.id.tv_date);
+        tvContent = (TextView) headerView.findViewById(R.id.tv_content);
     }
 
     private void initTitleBar() {
@@ -167,7 +177,7 @@ public class EmailDetailActivity extends BaseActivity implements IViewReply {
 
         mSmartRefreshLayout.finishRefresh();
         mSmartRefreshLayout.finishLoadmore();
-        adapter.setEmptyView(R.layout.recycler_item_tianyuan_empty,mRecyclerView);
+        adapter.setEmptyView(R.layout.recycler_item_tianyuan_empty2,mRecyclerView);
         Reply reply = JSON.parseObject(result, new TypeReference<Reply>() {
         });
 

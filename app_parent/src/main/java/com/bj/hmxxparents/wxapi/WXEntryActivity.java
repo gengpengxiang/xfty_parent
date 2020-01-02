@@ -70,7 +70,7 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
                 result = R.string.errcode_unknown;
                 break;
         }
-        Toast.makeText(this, result, Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, result, Toast.LENGTH_LONG).show();
         this.finish();
         overridePendingTransition(0, 0);
     }

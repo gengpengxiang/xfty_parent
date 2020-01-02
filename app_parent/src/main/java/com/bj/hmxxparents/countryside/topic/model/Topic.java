@@ -45,6 +45,7 @@ public class Topic {
     public static class DataBean {
         /**
          * tianyuanid : 6
+         * "status": "0",
          * teacher_img : bd286adc65af02d6b474564831eaa09a.jpeg
          * teacher_name : 159
          * time : 11-23 15:50
@@ -59,6 +60,7 @@ public class Topic {
          */
 
         private String tianyuanid;
+        private String status;
         private String teacher_img;
         private String teacher_name;
         private String time;
@@ -77,6 +79,14 @@ public class Topic {
 
         public void setTianyuanid(String tianyuanid) {
             this.tianyuanid = tianyuanid;
+        }
+
+        public String getStatus() {
+            return status;
+        }
+
+        public void setStatus(String status) {
+            this.status = status;
         }
 
         public String getTeacher_img() {

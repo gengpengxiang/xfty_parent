@@ -11,9 +11,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -22,7 +20,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
@@ -30,7 +27,6 @@ import com.andview.refreshview.utils.LogUtils;
 import com.bj.hmxxparents.BaseFragment;
 import com.bj.hmxxparents.R;
 import com.bj.hmxxparents.activity.LoginActivity;
-import com.bj.hmxxparents.activity.MainActivity;
 import com.bj.hmxxparents.activity.RelationKidActivity;
 import com.bj.hmxxparents.activity.SettingActivity;
 import com.bj.hmxxparents.activity.StudentCompleteInfoActivity;
@@ -42,25 +38,21 @@ import com.bj.hmxxparents.entity.AppVersionInfo;
 import com.bj.hmxxparents.entity.KidClassInfo;
 import com.bj.hmxxparents.entity.StudentInfos;
 import com.bj.hmxxparents.manager.UMPushManager;
+import com.bj.hmxxparents.read.ReadActivity;
 import com.bj.hmxxparents.service.DownloadAppService;
 import com.bj.hmxxparents.utils.AppUtils;
 import com.bj.hmxxparents.utils.DataCleanManager;
 import com.bj.hmxxparents.utils.LL;
-import com.bj.hmxxparents.utils.PermissionsCheckUtisls;
 import com.bj.hmxxparents.utils.PreferencesUtils;
 import com.bj.hmxxparents.utils.StringUtils;
 import com.bj.hmxxparents.utils.T;
 import com.bumptech.glide.Glide;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.view.SimpleDraweeView;
-import com.hjq.permissions.OnPermission;
-import com.hjq.permissions.Permission;
-import com.hjq.permissions.XXPermissions;
 import com.hyphenate.chat.EMClient;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
-
 import com.tbruyelle.rxpermissions2.RxPermissions;
 import com.umeng.analytics.MobclickAgent;
 import com.yongchun.library.view.ImageSelectorActivity;
@@ -135,10 +127,19 @@ public class UserFragment extends BaseFragment {
         super.onCreate(savedInstanceState);
     }
 
-    @OnClick(R.id.rl_email)
-    public void onClick() {
-        Intent intent = new Intent(getActivity(), EmailActivity.class);
-        startActivityForResult(intent, 1);
+
+    @OnClick({R.id.rl_email, R.id.rl_read})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.rl_email:
+                Intent intent = new Intent(getActivity(), EmailActivity.class);
+                startActivityForResult(intent, 1);
+                break;
+            case R.id.rl_read:
+                Intent intent1 = new Intent(getActivity(),ReadActivity.class);
+                startActivity(intent1);
+                break;
+        }
     }
 
     @Nullable
@@ -433,6 +434,12 @@ public class UserFragment extends BaseFragment {
         startActivity(intent);
     }
 
+    @OnClick(R.id.rl_read)
+    void clickRead() {
+        Intent intent = new Intent(getActivity(), ReadActivity.class);
+        startActivity(intent);
+    }
+
     @OnClick(R.id.rl_check_version)
     void clickCheckNewVersion() {
         if (System.currentTimeMillis() - currMillis > 1000) {
@@ -550,7 +557,6 @@ public class UserFragment extends BaseFragment {
                 });
     }
 
-
     private class GetStudentInfoTask extends AsyncTask<String, Integer, KidClassInfo> {
         @Override
         protected void onPreExecute() {
@@ -659,6 +665,7 @@ public class UserFragment extends BaseFragment {
         Intent intent = new Intent(getActivity(), DownloadAppService.class);
         Bundle args = new Bundle();
         args.putString(MLConfig.KEY_BUNDLE_DOWNLOAD_URL, downloadUrl);
+//        args.putString(MLConfig.KEY_BUNDLE_DOWNLOAD_URL, "https://spark-app.oss-cn-qingdao.aliyuncs.com/app/jz_1.8.8.apk");
         intent.putExtras(args);
         getActivity().startService(intent);
     }

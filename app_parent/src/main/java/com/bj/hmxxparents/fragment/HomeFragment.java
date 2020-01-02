@@ -6,18 +6,14 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -39,7 +35,6 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
@@ -50,30 +45,32 @@ import com.bj.hmxxparents.R;
 import com.bj.hmxxparents.activity.BadgeActivity;
 import com.bj.hmxxparents.activity.BadgeDetailActivity;
 import com.bj.hmxxparents.activity.ChatActivity;
-import com.bj.hmxxparents.activity.CommendDetailActivity;
 import com.bj.hmxxparents.activity.GaijinDetailActivity;
 import com.bj.hmxxparents.activity.LevelDetailActivity;
 import com.bj.hmxxparents.activity.LoadingGameActivity;
-import com.bj.hmxxparents.activity.MainActivity;
 import com.bj.hmxxparents.activity.QRCodeScanActivity;
 import com.bj.hmxxparents.activity.RankListActivity;
 import com.bj.hmxxparents.activity.RelationKidActivity;
-import com.bj.hmxxparents.activity.StudentReportActivity;
 import com.bj.hmxxparents.adapter.LatestNewsHomeAdapter;
 import com.bj.hmxxparents.api.Constant;
 import com.bj.hmxxparents.api.LmsDataService;
 import com.bj.hmxxparents.api.MLConfig;
 import com.bj.hmxxparents.api.MLProperties;
+import com.bj.hmxxparents.comment.CommentActivity;
 import com.bj.hmxxparents.entity.AppVersionInfo;
 import com.bj.hmxxparents.entity.ClassNewsInfo;
 import com.bj.hmxxparents.entity.KidClassInfo;
 import com.bj.hmxxparents.entity.KidDataInfo;
 import com.bj.hmxxparents.entity.MsgEvent;
 import com.bj.hmxxparents.entity.ReportInfo;
+import com.bj.hmxxparents.huodong.HuodongActivity;
 import com.bj.hmxxparents.manager.UMPushManager;
 import com.bj.hmxxparents.pet.model.StudentInfo;
 import com.bj.hmxxparents.pet.view.PetALLActivity;
-import com.bj.hmxxparents.report.ReportActivity;
+import com.bj.hmxxparents.read.ReadActivity;
+import com.bj.hmxxparents.read.ReadActivity2;
+import com.bj.hmxxparents.report.study.ReportStudyActivity;
+import com.bj.hmxxparents.report.term.ReportTermActivity;
 import com.bj.hmxxparents.service.DownloadAppService;
 import com.bj.hmxxparents.utils.AppUtils;
 import com.bj.hmxxparents.utils.LL;
@@ -82,8 +79,6 @@ import com.bj.hmxxparents.utils.PreferencesUtils;
 import com.bj.hmxxparents.utils.StringUtils;
 import com.bj.hmxxparents.utils.T;
 import com.bj.hmxxparents.widget.AutoScaleTextView;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.douhao.game.entity.ChallengeInfo;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.backends.pipeline.PipelineDraweeController;
@@ -188,13 +183,18 @@ public class HomeFragment extends BaseFragment {
     private SimpleDraweeView svPet;
     private String petUrl;
     private ImageView ivClothes;
-    private RelativeLayout layoutInfo,layoutReport;
+    private RelativeLayout layoutInfo;
     private TextView tvScore;
-    private TextView tvBanji,tvGaijin,tvDianzan;
-    private TextView tvReportTitle;
+    private TextView tvBanji, tvGaijin, tvDianzan;
+    //报告相关
+    private ImageView reportBeahviorBig, reportStudyBig, reportRead,reportBeahviorSmall, reportStudySmall;
+    private LinearLayout layoutReportSmall;
 
     private AutoScaleTextView autofitTextView;
     private RelativeLayout layoutHuizhang;
+
+    private String yuedudaka_map = "1";
+    private int huodong_status = 0;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -212,8 +212,8 @@ public class HomeFragment extends BaseFragment {
 
         initView();
 
-        if(!StringUtils.isEmpty(PreferencesUtils.getString(getActivity(), "URL_PET",""))){
-            String urlPet = PreferencesUtils.getString(getActivity(), "URL_PET","");
+        if (!StringUtils.isEmpty(PreferencesUtils.getString(getActivity(), "URL_PET", ""))) {
+            String urlPet = PreferencesUtils.getString(getActivity(), "URL_PET", "");
             PipelineDraweeController controller = (PipelineDraweeController) Fresco.newDraweeControllerBuilder()
                     .setUri(urlPet)
                     .setOldController(svPet.getController())
@@ -222,7 +222,7 @@ public class HomeFragment extends BaseFragment {
             svPet.setController(controller);
         }
 
-        getPetPermission(0);
+//        getPetPermission(0);
         return view;
     }
 
@@ -253,11 +253,19 @@ public class HomeFragment extends BaseFragment {
                     @Override
                     public void onSubscribe(Disposable d) {
                     }
+
                     @Override
                     public void onNext(StudentInfo studentInfo) {
 
-                        if(studentInfo.getData()!=null) {
+                        if (studentInfo.getData() != null) {
                             StudentInfo.DataBean bean = studentInfo.getData();
+
+
+                            yuedudaka_map = bean.getYuedudaka_map();
+
+                            PreferencesUtils.putString(getActivity(), "yuedudaka_map", bean.getYuedudaka_map());
+
+                            PreferencesUtils.putString(getActivity(), "xuexibaogao_yingyustatus", bean.getXuexibaogao_yingyustatus());
 
                             autofitTextView.setText(bean.getScore() + "");
                             layoutHuizhang.setVisibility(View.VISIBLE);
@@ -266,15 +274,48 @@ public class HomeFragment extends BaseFragment {
 //                            tvScore.setText(bean.getScore() + "");
                             tvHuizhang.setText(bean.getHuizhang());
                             tvBanji.setText(bean.getClass_score());
-                            tvGaijin.setText(bean.getGaijin());
-                            tvDianzan.setText(bean.getDianzan());
 
-                        if(bean.getBaogao_status().equals("1")){
-                            layoutReport.setVisibility(View.VISIBLE);
-                        }else {
-                            layoutReport.setVisibility(View.GONE);
-                        }
-                        tvReportTitle.setText(bean.getBaogao_title());
+                            huodong_status = bean.getHuodong_status();
+
+
+//                            int a = Integer.parseInt(bean.getGaijin());
+//                            int b = Integer.parseInt(bean.getDianzan());
+//                            int c = a+b;
+//
+//                            tvGaijin.setText(c+"");
+//                            tvDianzan.setText(bean.getDianzan());
+
+                            try {
+                                int a = Integer.parseInt(bean.getGaijin());
+                                int b = Integer.parseInt(bean.getDianzan());
+                                int c = a+b;
+                                tvGaijin.setText(c+"");
+                                tvDianzan.setText(bean.getHuodong_num());
+
+                            } catch (NumberFormatException e) {
+                                e.printStackTrace();
+                            }
+
+
+                            if (bean.getBaogao_status().equals("1")&&bean.getXuexibaogao_status().equals("1")) {
+                                layoutReportSmall.setVisibility(View.VISIBLE);
+                            }else {
+                                layoutReportSmall.setVisibility(View.GONE);
+                            }
+
+                            if (bean.getBaogao_status().equals("1")&&!bean.getXuexibaogao_status().equals("1")) {
+                                reportBeahviorBig.setVisibility(View.VISIBLE);
+                            }
+
+                            if (bean.getXuexibaogao_status().equals("1")&&!bean.getBaogao_status().equals("1")) {
+                                reportStudyBig.setVisibility(View.VISIBLE);
+                            }
+
+                            if(bean.getYuedudaka_status().equals("1")){
+                                reportRead.setVisibility(View.VISIBLE);
+                            }else {
+                                reportRead.setVisibility(View.GONE);
+                            }
 
 
                             int status = studentInfo.getData().getChongwu_status();
@@ -298,7 +339,7 @@ public class HomeFragment extends BaseFragment {
 
                                 petUrl = BASE_RESOURCE_URL + studentInfo.getData().getChongwu().getChongwu_info().getImg();
 
-                                PreferencesUtils.putString(getActivity(), "URL_PET",petUrl);
+                                PreferencesUtils.putString(getActivity(), "URL_PET", petUrl);
                                 showGif(svPet, petUrl);
                                 svPet.setOnClickListener(new View.OnClickListener() {
                                     @Override
@@ -329,14 +370,17 @@ public class HomeFragment extends BaseFragment {
 
                         }
                     }
+
                     @Override
                     public void onError(Throwable e) {
                     }
+
                     @Override
                     public void onComplete() {
                     }
                 });
     }
+
     Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -358,16 +402,19 @@ public class HomeFragment extends BaseFragment {
                 .build();
         sv.setController(controller);
     }
+
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initData();
     }
+
     private void initToolBar() {
         tvTitle.setVisibility(View.VISIBLE);
         tvTitle.setText(R.string.app_name);
         imgScan.setVisibility(View.VISIBLE);
     }
+
     private void initView() {
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -431,8 +478,9 @@ public class HomeFragment extends BaseFragment {
                 // 刷新挑战赛的排名信息
                 getStudentChallengeInfo();
                 // 是否显示报告入口
-                getReportInfo();
+                //getReportInfo();
 
+                getPetPermission(0);
             }
 
             @Override
@@ -449,13 +497,13 @@ public class HomeFragment extends BaseFragment {
 
     private void initHeaderView() {
 
-        autofitTextView = (AutoScaleTextView)headerView.findViewById(R.id.autoFitTextView);
-        layoutHuizhang = (RelativeLayout)headerView.findViewById(R.id.layout_huizhang);
+        autofitTextView = (AutoScaleTextView) headerView.findViewById(R.id.autoFitTextView);
+        layoutHuizhang = (RelativeLayout) headerView.findViewById(R.id.layout_huizhang);
 
-        tvScore = (TextView)headerView.findViewById(R.id.tv_score);
-        tvBanji = (TextView)headerView.findViewById(R.id.tv_banji);
-        tvGaijin = (TextView)headerView.findViewById(R.id.tv_gaijin);
-        tvDianzan = (TextView)headerView.findViewById(R.id.tv_dianzan);
+        tvScore = (TextView) headerView.findViewById(R.id.tv_score);
+        tvBanji = (TextView) headerView.findViewById(R.id.tv_banji);
+        tvGaijin = (TextView) headerView.findViewById(R.id.tv_gaijin);
+        tvDianzan = (TextView) headerView.findViewById(R.id.tv_dianzan);
 
         imgStudentPhoto = (SimpleDraweeView) headerView.findViewById(R.id.img_kidPhoto);
         tvStudentDesc = (TextView) headerView.findViewById(R.id.tv_kid_pingyu);
@@ -480,9 +528,13 @@ public class HomeFragment extends BaseFragment {
         svPet = (SimpleDraweeView) headerView.findViewById(R.id.sv_pet);
         ivClothes = (ImageView) headerView.findViewById(R.id.iv_clothes);
 
-        //学期报告相关
-        layoutReport = (RelativeLayout) headerView.findViewById(R.id.layout_report);
-        tvReportTitle = (TextView)headerView.findViewById(R.id.tv_report_title);
+        //报告相关
+        reportBeahviorBig = (ImageView) headerView.findViewById(R.id.iv_report_beahvior_big);
+        reportStudyBig = (ImageView) headerView.findViewById(R.id.iv_report_study_big);
+        reportRead = (ImageView)headerView.findViewById(R.id.iv_read);
+        layoutReportSmall = (LinearLayout)headerView.findViewById(R.id.layout_report_small);
+        reportBeahviorSmall = (ImageView) headerView.findViewById(R.id.iv_report_beahvior_small);
+        reportStudySmall = (ImageView) headerView.findViewById(R.id.iv_report_study_small);
 
         ivClothes.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -542,13 +594,17 @@ public class HomeFragment extends BaseFragment {
         });
         //班级点击
         layoutClass.setOnClickListener(v -> {
-            T.showShort(getActivity(),"蜂蜜："+tvBanji.getText().toString());
+            T.showShort(getActivity(), "蜂蜜：" + tvBanji.getText().toString());
         });
 
         layoutGaijin.setOnClickListener(v -> {
 //            T.showShort(getActivity(),"敬请期待");
 
-            Intent intent = new Intent(getActivity(), GaijinDetailActivity.class);
+//            Intent intent = new Intent(getActivity(), GaijinDetailActivity.class);
+//            intent.putExtra(MLProperties.BUNDLE_KEY_KID_ID, kidId);
+//            intent.putExtra(MLProperties.BUNDLE_KEY_KID_SCORE, kidScore);
+//            startActivity(intent);
+            Intent intent = new Intent(getActivity(), CommentActivity.class);
             intent.putExtra(MLProperties.BUNDLE_KEY_KID_ID, kidId);
             intent.putExtra(MLProperties.BUNDLE_KEY_KID_SCORE, kidScore);
             startActivity(intent);
@@ -556,26 +612,67 @@ public class HomeFragment extends BaseFragment {
 
 
         flKidCommend.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), CommendDetailActivity.class);
-            intent.putExtra(MLProperties.BUNDLE_KEY_KID_ID, kidId);
-            intent.putExtra(MLProperties.BUNDLE_KEY_KID_SCORE, kidScore);
-            startActivity(intent);
+//            Intent intent = new Intent(getActivity(), CommendDetailActivity.class);
+//            intent.putExtra(MLProperties.BUNDLE_KEY_KID_ID, kidId);
+//            intent.putExtra(MLProperties.BUNDLE_KEY_KID_SCORE, kidScore);
+//            startActivity(intent);
+
+            if(huodong_status==0){
+                T.showShort(getActivity(),"敬请期待");
+            } if(huodong_status==1){
+                Intent intent = new Intent(getActivity(), HuodongActivity.class);
+                intent.putExtra(MLProperties.BUNDLE_KEY_KID_ID, kidId);
+                startActivity(intent);
+            }
+
         });
 
-        layoutReport.setOnClickListener(new View.OnClickListener() {
+        reportBeahviorBig.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(getActivity(), StudentReportActivity.class);
-//                Bundle bundle = new Bundle();
-//                bundle.putInt("reportRealPay", currReportInfo.reportRealPay);
-//                bundle.putInt("reportPrice", currReportInfo.reportPrice);
-//                bundle.putBoolean("isUserPaySuccess", currReportInfo.isUserPaySuccess);
-//                intent.putExtras(bundle);
-//                startActivity(intent);
-                Intent intent = new Intent(getActivity(), ReportActivity.class);
-//                intent.putExtra("name",);
-                intent.putExtra("id",kidId);
+                Intent intent = new Intent(getActivity(), ReportTermActivity.class);
+                intent.putExtra("id", kidId);
                 startActivity(intent);
+            }
+        });
+        reportStudyBig.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ReportStudyActivity.class);
+                intent.putExtra("id", kidId);
+                startActivity(intent);
+            }
+        });
+
+        reportBeahviorSmall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ReportTermActivity.class);
+                intent.putExtra("id", kidId);
+                startActivity(intent);
+            }
+        });
+        reportStudySmall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ReportStudyActivity.class);
+                intent.putExtra("id", kidId);
+                startActivity(intent);
+            }
+        });
+
+        reportRead.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(yuedudaka_map.equals("1")){
+                    Intent intent = new Intent(getActivity(), ReadActivity.class);
+                    intent.putExtra("yuedudaka_map","1");
+                    startActivity(intent);
+                }if(yuedudaka_map.equals("2")){
+                    Intent intent = new Intent(getActivity(), ReadActivity2.class);
+                    startActivity(intent);
+                }
+
             }
         });
     }
@@ -648,7 +745,7 @@ public class HomeFragment extends BaseFragment {
         schoolImg = PreferencesUtils.getString(getActivity(), MLProperties.BUNDLE_KEY_SCHOOL_IMG, "");
         schoolID = PreferencesUtils.getString(getActivity(), MLProperties.BUNDLE_KEY_SCHOOL_CODE, "");
 
-        Log.e("学生id",kidId);
+        Log.e("学生id", kidId);
 
         if (!StringUtils.isEmpty(schoolImg)) {
             ivSchoolImg.setImageURI(Uri.parse(schoolImg));
@@ -658,6 +755,10 @@ public class HomeFragment extends BaseFragment {
 
         // 初始化头部的数据
         initHeaderData();
+
+        //add
+        getPetPermission(0);
+        //ad
 
         currentPage = 1;
         mDataList.clear();
@@ -714,7 +815,7 @@ public class HomeFragment extends BaseFragment {
         } else {
             tvStudentDesc.setText("我们还不知道你的最新状态。");
         }
-       // tvJifen.setText("点赞" + (StringUtils.isEmpty(kidScore) || kidScore.equals("0") ? "" : " " + kidScore));
+        // tvJifen.setText("点赞" + (StringUtils.isEmpty(kidScore) || kidScore.equals("0") ? "" : " " + kidScore));
         //tvHuizhang.setText("徽章" + (StringUtils.isEmpty(kidBadge) || kidBadge.equals("0") ? "" : " " + kidBadge));
         //tvZhuanxiang.setText("专项" + (StringUtils.isEmpty(kidBadgePro) || kidBadgePro.equals("0") ? "" : " " + kidBadgePro));
 
@@ -739,29 +840,6 @@ public class HomeFragment extends BaseFragment {
                         LL.i("未授权拨打电话");
                     }
                 });
-
-//        String[] mPermissionList = new String[]{Manifest.permission.CAMERA};
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-//            if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-//                //进入到这里代表没有权限.
-//                if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.CAMERA)) {
-//                    //已经禁止提示了
-//                    Toast.makeText(getActivity(), "您已禁止使用相机权限，需要重新开启。", Toast.LENGTH_SHORT).show();
-//                } else {
-//                    ActivityCompat.requestPermissions(getActivity(), mPermissionList, 100);
-//                }
-//            } else {
-//                Intent intent = new Intent(getActivity(), QRCodeScanActivity.class);
-//                startActivityForResult(intent, QRCODE_REQUEST_CODE);
-//            }
-//        } else {
-//            if (!cameraIsCanUse()) {
-//                Toast.makeText(getActivity(), "您已禁止使用相机权限，需要重新开启。", Toast.LENGTH_SHORT).show();
-//            } else {
-//                Intent intent = new Intent(getActivity(), QRCodeScanActivity.class);
-//                startActivityForResult(intent, QRCODE_REQUEST_CODE);
-//            }
-//        }
     }
 
     private Handler mHandler = new Handler();
@@ -773,7 +851,7 @@ public class HomeFragment extends BaseFragment {
             @Override
             public void run() {
                 kidScore = String.valueOf(Integer.valueOf(StringUtils.isEmpty(kidScore) ? "0" : kidScore) + Integer.valueOf(value));
-               // tvJifen.setText("点赞 " + (StringUtils.isEmpty(kidScore) ? "0" : kidScore));
+                // tvJifen.setText("点赞 " + (StringUtils.isEmpty(kidScore) ? "0" : kidScore));
                 PreferencesUtils.putString(getActivity(), MLProperties.BUNDLE_KEY_KID_SCORE, kidScore);
             }
         }, 900);
@@ -793,7 +871,7 @@ public class HomeFragment extends BaseFragment {
                 hidePopViewAddBadge();
                 // 修改数字
                 kidBadge = String.valueOf(Integer.valueOf(StringUtils.isEmpty(kidBadge) ? "0" : kidBadge) + Integer.valueOf(value));
-               // tvHuizhang.setText("徽章" + (StringUtils.isEmpty(kidBadge) || kidBadge.equals("0") ? "" : " " + kidBadge));
+                // tvHuizhang.setText("徽章" + (StringUtils.isEmpty(kidBadge) || kidBadge.equals("0") ? "" : " " + kidBadge));
                 PreferencesUtils.putString(getActivity(), MLProperties.BUNDLE_KEY_KID_BADGE, kidBadge);
             }
 
@@ -808,13 +886,6 @@ public class HomeFragment extends BaseFragment {
             }
         });
 
-//        tvAddBadge.setText("+" + value);
-//        animationTextView(tvAddBadge, value);
-//        mHandler.postDelayed(() -> {
-//            kidBadge = String.valueOf(Integer.valueOf(StringUtils.isEmpty(kidBadge) ? "0" : kidBadge) + Integer.valueOf(value));
-//            tvHuizhang.setText("徽章" + (StringUtils.isEmpty(kidBadge) || kidBadge.equals("0") ? "" : " " + kidBadge));
-//            PreferencesUtils.putString(getActivity(), MLProperties.BUNDLE_KEY_KID_BADGE, kidBadge);
-//        }, 900);
     }
 
     private void actionAddBadgePro(final String value) {
@@ -845,13 +916,7 @@ public class HomeFragment extends BaseFragment {
             }
         });
 
-//        tvAddZhuanxiang.setText("+" + value);
-//        animationTextView(tvAddZhuanxiang, value);
-//        mHandler.postDelayed(() -> {
-//            kidBadgePro = String.valueOf(Integer.valueOf(StringUtils.isEmpty(kidBadgePro) ? "0" : kidBadgePro) + Integer.valueOf(value));
-//            tvZhuanxiang.setText("专项" + (StringUtils.isEmpty(kidBadgePro) || kidBadgePro.equals("0") ? "" : " " + kidBadgePro));
-//            PreferencesUtils.putString(getActivity(), MLProperties.BUNDLE_KEY_KID_BADGE_PRO, kidBadge);
-//        }, 900);
+
     }
 
     @Override
@@ -879,6 +944,7 @@ public class HomeFragment extends BaseFragment {
             String kidId = params[0];
             String qrCode = params[1];
             Log.e("qrCode", qrCode);
+            Log.e("qrCode2", qrCode.length() + "");
             LmsDataService mService = new LmsDataService();
             String[] result;
             try {
@@ -887,15 +953,15 @@ public class HomeFragment extends BaseFragment {
                     result = mService.addKidBadge(kidId, resultCode);//扫描徽章
 //                    result = mService.addKidScore(kidId, resultCode);
                 } else {
-                    if (!StringUtils.checkQRCode(qrCode)) {
-                        result = new String[4];
-                        result[0] = "0";
-                        result[1] = "错误的二维码";
-                    } else {
-                        result = mService.addKidBadge(kidId, qrCode);
+//                    if (!StringUtils.checkQRCode(qrCode)) {
+//                        result = new String[4];
+//                        result[0] = "0";
+//                        result[1] = "错误的二维码";
+//                    } else {
+                    result = mService.addKidBadge(kidId, qrCode);
 //                        result = mService.addKidScore(kidId, qrCode);
-                        Log.e("识别结果呢", result[0].toString() + result[1].toString());
-                    }
+                    Log.e("识别结果呢", result[0].toString() + result[1].toString());
+//                    }
                 }
                 return result;
             } catch (Exception e) {
@@ -919,10 +985,10 @@ public class HomeFragment extends BaseFragment {
                 String value = result[3];
                 if (type.equals("8")) {
 
-                    Log.e("徽章type1",type);
+                    Log.e("徽章type1", type);
                     actionAddBadgePro(value);
                 } else {
-                    Log.e("徽章type2",type);
+                    Log.e("徽章type2", type);
                     actionAddBadge(value);
                 }
                 mHandler.postDelayed(() -> {
@@ -973,6 +1039,7 @@ public class HomeFragment extends BaseFragment {
                 ifPageInit = false;
             }
         }
+
         @Override
         protected KidDataInfo doInBackground(String... params) {
             LmsDataService mService = new LmsDataService();
@@ -994,6 +1061,7 @@ public class HomeFragment extends BaseFragment {
             }
             return kidDataInfo;
         }
+
         @Override
         protected void onPostExecute(KidDataInfo result) {
             hideLoadingDialog();
@@ -1003,9 +1071,9 @@ public class HomeFragment extends BaseFragment {
                 T.showShort(getActivity(), message);
             } else {
                 kidScore = result.getScore();
-              //  tvJifen.setText("点赞" + (StringUtils.isEmpty(kidScore) || kidScore.equals("0") ? "" : " " + kidScore));
+                //  tvJifen.setText("点赞" + (StringUtils.isEmpty(kidScore) || kidScore.equals("0") ? "" : " " + kidScore));
                 kidBadge = result.getBadge();
-               // tvHuizhang.setText("徽章" + (StringUtils.isEmpty(kidBadge) || kidBadge.equals("0") ? "" : " " + kidBadge));
+                // tvHuizhang.setText("徽章" + (StringUtils.isEmpty(kidBadge) || kidBadge.equals("0") ? "" : " " + kidBadge));
                 kidBadgePro = result.getBadgePro();
                 // tvZhuanxiang.setText("专项" + (StringUtils.isEmpty(kidBadgePro) || kidBadgePro.equals("0") ? "" : " " + kidBadgePro));
                 kidGrade = result.getGrade();
@@ -1136,7 +1204,7 @@ public class HomeFragment extends BaseFragment {
         // 刷新挑战赛的排名信息
         getStudentChallengeInfo();
         // 是否显示报告入口
-        getReportInfo();
+       // getReportInfo();
 
 
         if (state) {
@@ -1194,27 +1262,26 @@ public class HomeFragment extends BaseFragment {
         @Override
         protected void onPostExecute(AppVersionInfo info) {
             if (StringUtils.isEmpty(info.getErrorCode()) || info.getErrorCode().equals("0")) {
-               // LL.i(info.getMessage());
+                // LL.i(info.getMessage());
                 return;
             }
 
             Log.e("版本信息", info.toString());
 
             if (info.getErrorCode().equals("1")) {
-                showNewVersionDialog(info.getQiangzhigengxin(),info.getTitle(), info.getContent(), info.getDownloadUrl());
+                showNewVersionDialog(info.getQiangzhigengxin(), info.getTitle(), info.getContent(), info.getDownloadUrl());
             } else if (info.getErrorCode().equals("2")) {
                 // T.showShort(TeacherClassesActivity.getActivity(), info.getMessage());
             }
         }
     }
 
-    private void showNewVersionDialog(String gengxin,String title, String content, final String downloadUrl) {
+    private void showNewVersionDialog(String gengxin, String title, String content, final String downloadUrl) {
 
         UpdateAPPAlertDialog dialog = new UpdateAPPAlertDialog(getActivity());
         dialog.setTitleText(title);
         dialog.setContentText(content);
         dialog.setCanceledOnTouchOutside(false);
-
 
 
         dialog.setConfirmClickListener(new UpdateAPPAlertDialog.OnSweetClickListener() {
@@ -1235,9 +1302,9 @@ public class HomeFragment extends BaseFragment {
         dialog.setCancelClickListener(new UpdateAPPAlertDialog.OnSweetClickListener() {
             @Override
             public void onClick(UpdateAPPAlertDialog sweetAlertDialog) {
-                if(gengxin.equals("1")){
+                if (gengxin.equals("1")) {
                     T.showShort(getActivity(), "请更新版本后重试");
-                }else {
+                } else {
                     sweetAlertDialog.dismiss();
                 }
             }
@@ -1252,10 +1319,10 @@ public class HomeFragment extends BaseFragment {
 
         dialog.show();
 
-        if(gengxin.equals("1")){
+        if (gengxin.equals("1")) {
             dialog.setCancelable(false);
             dialog.hideTvCancelDownLoad();
-        }else {
+        } else {
             dialog.setCancelable(true);
         }
 

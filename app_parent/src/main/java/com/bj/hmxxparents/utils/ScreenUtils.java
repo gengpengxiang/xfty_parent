@@ -152,7 +152,6 @@ public class ScreenUtils {
 
     /**
      * 退出全屏
-     *
      * @param activity
      */
     public static void quitFullScreen(Activity activity) {

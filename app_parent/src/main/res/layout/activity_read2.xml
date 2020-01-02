@@ -1,0 +1,1113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bj.hmxxparents.read.ReadActivity">
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/layout_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/bg_read2">
+
+        <!--适配分割线 -->
+        <View
+            android:id="@+id/view0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="10%"
+            app:layout_widthPercent="70%" />
+
+        <View
+            android:id="@+id/view_line0"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_below="@+id/view0" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@+id/view_line0"
+            app:layout_heightPercent="10%"
+            app:layout_widthPercent="70%" />
+
+        <View
+            android:id="@+id/view_line1"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_below="@+id/view1" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@+id/view_line1"
+            app:layout_heightPercent="10%"
+            app:layout_widthPercent="70%" />
+
+        <View
+            android:id="@+id/view_line2"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_below="@+id/view2" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@+id/view_line2"
+            app:layout_heightPercent="10%"
+            app:layout_widthPercent="70%" />
+
+        <View
+            android:id="@+id/view_line3"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_below="@+id/view3" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@+id/view_line3"
+            app:layout_heightPercent="10%"
+            app:layout_widthPercent="70%" />
+
+        <View
+            android:id="@+id/view_line4"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_below="@+id/view4" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@+id/view_line4"
+            app:layout_heightPercent="10%"
+            app:layout_widthPercent="70%" />
+
+        <View
+            android:id="@+id/view_line5"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_below="@+id/view5" />
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@+id/view_line5"
+            app:layout_heightPercent="10%"
+            app:layout_widthPercent="70%" />
+
+        <View
+            android:id="@+id/view_line6"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_below="@+id/view6" />
+
+        <View
+            android:id="@+id/view7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@+id/view_line6"
+            app:layout_heightPercent="10%"
+            app:layout_widthPercent="70%" />
+
+        <View
+            android:id="@+id/view_line7"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_below="@+id/view7" />
+
+        <View
+            android:id="@+id/view8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@+id/view_line7"
+            app:layout_heightPercent="10%"
+            app:layout_widthPercent="70%" />
+
+        <View
+            android:id="@+id/view_line8"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_below="@+id/view8" />
+
+        <!--适配分割线 -->
+
+        <RelativeLayout
+            android:id="@+id/layout_city1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/view_line5">
+
+            <ImageView
+                android:id="@+id/iv_city_photo1"
+                android:layout_width="@dimen/photo_city_maxWidth"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="25dp"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_city_lanzhou" />
+
+            <TextView
+                android:id="@+id/tv_city_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:background="@mipmap/ic_flag_green"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="8dp"
+                android:paddingTop="3dp"
+                android:text="兰州"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_city_lock1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/iv_city_photo1"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="-18dp"
+                android:background="@mipmap/ic_read_lock"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_city2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_line3"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="-2dp"
+            android:layout_toRightOf="@+id/layout_city1">
+
+            <ImageView
+                android:id="@+id/iv_city_photo2"
+                android:layout_width="@dimen/photo_city_maxWidth"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_city_yinchuan" />
+
+            <TextView
+                android:id="@+id/tv_city_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:background="@mipmap/ic_flag_green"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="8dp"
+                android:paddingTop="3dp"
+                android:text="银川"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_city_lock2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/iv_city_photo2"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="-18dp"
+                android:background="@mipmap/ic_read_lock"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_city3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_line0"
+            android:layout_marginLeft="-40dp"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@+id/layout_city2">
+
+            <ImageView
+                android:id="@+id/iv_city_photo3"
+                android:layout_width="@dimen/photo_city_maxWidth"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_city_bayandaoer" />
+
+            <TextView
+                android:id="@+id/tv_city_name3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:background="@mipmap/ic_flag_green"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="8dp"
+                android:paddingTop="3dp"
+                android:text="巴彦\n淖尔"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_city_lock3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/iv_city_photo3"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="-18dp"
+                android:background="@mipmap/ic_read_lock"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_city4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_line1"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@+id/layout_city3">
+
+            <ImageView
+                android:id="@+id/iv_city_photo4"
+                android:layout_width="@dimen/photo_city_maxWidth"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="18dp"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_city_baotou" />
+
+            <TextView
+                android:id="@+id/tv_city_name4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:background="@mipmap/ic_flag_green"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="8dp"
+                android:paddingTop="3dp"
+                android:text="包头"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_city_lock4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/iv_city_photo4"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="-18dp"
+                android:background="@mipmap/ic_read_lock"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_city5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_line3"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/layout_city3">
+
+            <ImageView
+                android:id="@+id/iv_city_photo5"
+                android:layout_width="@dimen/photo_city_maxWidth"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="21dp"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_city_yanan" />
+
+            <TextView
+                android:id="@+id/tv_city_name5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:background="@mipmap/ic_flag_green"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="8dp"
+                android:paddingTop="3dp"
+                android:text="延安"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_city_lock5"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/iv_city_photo5"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="-18dp"
+                android:background="@mipmap/ic_read_lock"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_city6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/view_line8"
+            android:layout_marginLeft="62dp"
+            android:layout_toRightOf="@+id/layout_city3">
+
+            <ImageView
+                android:id="@+id/iv_city_photo6"
+                android:layout_width="@dimen/photo_city_maxWidth"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="22dp"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_city_yuncheng" />
+
+            <TextView
+                android:id="@+id/tv_city_name6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:background="@mipmap/ic_flag_green"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="8dp"
+                android:paddingTop="3dp"
+                android:text="运城"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_city_lock6"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/iv_city_photo6"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="-18dp"
+                android:background="@mipmap/ic_read_lock"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_city7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/view_line8"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@+id/layout_city6">
+
+            <ImageView
+                android:id="@+id/iv_city_photo7"
+                android:layout_width="@dimen/photo_city_maxWidth"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="24dp"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_city_luoyang" />
+
+            <TextView
+                android:id="@+id/tv_city_name7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:background="@mipmap/ic_flag_green"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="8dp"
+                android:paddingTop="3dp"
+                android:text="洛阳"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_city_lock7"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/iv_city_photo7"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="-18dp"
+                android:background="@mipmap/ic_read_lock"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_city8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/view_line8"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="11dp"
+            android:layout_toRightOf="@+id/layout_city7">
+
+            <ImageView
+                android:id="@+id/iv_city_photo8"
+                android:layout_width="@dimen/photo_city_maxWidth"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="24dp"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_city_zhengzhou" />
+
+            <TextView
+                android:id="@+id/tv_city_name8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:background="@mipmap/ic_flag_green"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="8dp"
+                android:paddingTop="3dp"
+                android:text="郑州"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_city_lock8"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/iv_city_photo8"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="-18dp"
+                android:background="@mipmap/ic_read_lock"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_city9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/view_line7"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="-10dp"
+            android:layout_toRightOf="@+id/layout_city8">
+
+            <ImageView
+                android:id="@+id/iv_city_photo9"
+                android:layout_width="@dimen/photo_city_maxWidth"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="23dp"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_city_kaifeng" />
+
+            <TextView
+                android:id="@+id/tv_city_name9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:background="@mipmap/ic_flag_green"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="8dp"
+                android:paddingTop="3dp"
+                android:text="开封"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_city_lock9"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/iv_city_photo9"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="-18dp"
+                android:background="@mipmap/ic_read_lock"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_city10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_line4"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/layout_city9">
+
+            <ImageView
+                android:id="@+id/iv_city_photo10"
+                android:layout_width="@dimen/photo_city_maxWidth"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="22dp"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_city_jinan" />
+
+            <TextView
+                android:id="@+id/tv_city_name10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:background="@mipmap/ic_flag_green"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="8dp"
+                android:paddingTop="3dp"
+                android:text="济南"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_city_lock10"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/iv_city_photo10"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="-18dp"
+                android:background="@mipmap/ic_read_lock"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_city11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/view_line4"
+            android:layout_marginBottom="-5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/layout_city10">
+
+            <ImageView
+                android:id="@+id/iv_city_photo11"
+                android:layout_width="@dimen/photo_city_maxWidth"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_city_dongying" />
+
+            <TextView
+                android:id="@+id/tv_city_name11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:background="@mipmap/ic_flag_green"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="8dp"
+                android:paddingTop="3dp"
+                android:text="东营"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_city_lock11"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/iv_city_photo11"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="-18dp"
+                android:background="@mipmap/ic_read_lock"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet1"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/view_line6"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/ic_bee_read" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet2"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@+id/view_line6"
+            android:layout_toRightOf="@+id/iv_pet1"
+            android:background="@mipmap/ic_bee_read" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet3"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/view_line6"
+            android:layout_marginBottom="-8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/iv_pet2"
+            android:background="@mipmap/ic_bee_read" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet4"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/view_line6"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@+id/iv_pet2"
+            android:background="@mipmap/ic_bee_read" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet5"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/view_line5"
+            android:layout_marginBottom="-5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/iv_pet4"
+            android:background="@mipmap/ic_bee_read" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet6"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/view_line4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="-20dp"
+            android:layout_toRightOf="@+id/iv_pet5"
+            android:background="@mipmap/ic_bee_read" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet7"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/view_line2"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/iv_pet5"
+            android:background="@mipmap/ic_bee_read" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet8"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/view_line1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/iv_pet4"
+            android:background="@mipmap/ic_bee_read" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet9"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/view_line1"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/iv_pet7"
+            android:background="@mipmap/ic_bee_read" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet10"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="11dp"
+            android:layout_below="@+id/view_line1"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/iv_pet9"
+            android:background="@mipmap/ic_bee_read" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet11"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/view_line1"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/iv_pet10"
+            android:background="@mipmap/ic_bee_read" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet12"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/view_line3"
+            android:layout_marginBottom="-8dp"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/iv_pet10"
+            android:background="@mipmap/ic_bee_read" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet13"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/view_line4"
+            android:layout_marginLeft="-5dp"
+            android:layout_toRightOf="@+id/iv_pet10"
+            android:background="@mipmap/ic_bee_read" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet14"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/view_line5"
+            android:layout_marginLeft="-12dp"
+            android:layout_toRightOf="@+id/iv_pet10"
+            android:background="@mipmap/ic_bee_read" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet15"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/view_line7"
+            android:layout_marginBottom="22dp"
+            android:layout_marginLeft="-10dp"
+            android:layout_toRightOf="@+id/iv_pet10"
+            android:background="@mipmap/ic_bee_read" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet16"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/view_line8"
+            android:layout_marginLeft="-20dp"
+            android:layout_toRightOf="@+id/iv_pet10"
+            android:background="@mipmap/ic_bee_read" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet17"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/view_line8"
+            android:layout_marginBottom="-2dp"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@+id/layout_city6"
+            android:background="@mipmap/ic_bee_read" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet18"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/view_line8"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/iv_pet17"
+            android:background="@mipmap/ic_bee_read" />
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet19"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/view_line8"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="-6dp"
+            android:layout_toRightOf="@+id/layout_city7"
+            android:background="@mipmap/ic_bee_read" />
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet20"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/view_line8"
+            android:layout_marginBottom="-5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_pet19"
+            android:background="@mipmap/ic_bee_read" />
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet21"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/view_line8"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/iv_pet20"
+            android:background="@mipmap/ic_bee_read" />
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet22"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/view_line7"
+            android:layout_marginBottom="-10dp"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@+id/layout_city9"
+            android:background="@mipmap/ic_bee_read" />
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet23"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/view_line6"
+            android:layout_marginBottom="-15dp"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/layout_city9"
+            android:background="@mipmap/ic_bee_read" />
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet24"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/view_line5"
+            android:layout_marginBottom="-15dp"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/iv_pet23"
+            android:background="@mipmap/ic_bee_read" />
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet25"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/view_line5"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@+id/iv_pet24"
+            android:background="@mipmap/ic_bee_read" />
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_pet26"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/view_line5"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="-5dp"
+            android:layout_toRightOf="@+id/iv_pet25"
+            android:background="@mipmap/ic_bee_read" />
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="-10dp"
+                android:layout_toRightOf="@+id/sv_photo"
+                android:background="@drawable/shape_corner_top"
+                android:paddingBottom="5dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="5dp"
+                android:text="            "
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sv_photo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:placeholderImage="@mipmap/ic_default_photo"
+                fresco:placeholderImageScaleType="focusCrop"
+                fresco:roundAsCircle="true"
+                fresco:roundingBorderColor="#8d4631"
+                fresco:roundingBorderWidth="0.1dp" />
+        </RelativeLayout>
+
+
+        <com.bj.hmxxparents.widget.AutoScaleTextView
+            android:id="@+id/tv_badge"
+            android:layout_width="42dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="60dp"
+            android:background="@mipmap/ic_read_badge"
+            android:gravity="center_horizontal"
+            android:lines="1"
+            android:paddingTop="10dp"
+            android:text=""
+            android:textColor="@color/text_orange_deep"
+            android:textSize="12sp"
+            fresco:minTextSize="10sp" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp">
+
+            <RelativeLayout
+                android:id="@+id/iv_honey"
+                android:layout_centerHorizontal="true"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@mipmap/ic_read_honey">
+
+                <com.bj.hmxxparents.widget.AutoScaleTextView
+                    android:id="@+id/tv_honey_num"
+                    android:layout_width="42dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:lines="1"
+                    android:paddingTop="18dp"
+                    android:gravity="center_horizontal"
+                    android:text=""
+                    android:textColor="@color/text_orange_deep"
+                    android:textSize="10sp"
+                    fresco:minTextSize="8sp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@+id/iv_honey"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-5dp">
+
+                <ProgressBar
+                    android:id="@+id/progress_honey"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="60dp"
+                    android:layout_height="12dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:progressDrawable="@drawable/shape_progressbar_honey" />
+
+                <TextView
+                    android:id="@+id/tv_honey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/text_white"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="50dp"
+            android:id="@+id/layout_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/bt_sign"
+                android:layout_width="42dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/bg_read_sign"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="@color/text_orange_deep"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:visibility="invisible"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/layout_signed"
+                android:layout_width="48dp"
+                android:layout_height="50dp"
+                android:background="@mipmap/bg_read_signed">
+                <com.bj.hmxxparents.widget.AutoScaleTextView
+                    android:gravity="center"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="18dp"
+                    android:id="@+id/bt_signed"
+                    android:layout_width="18dp"
+                    android:layout_height="wrap_content"
+                    android:text="0t"
+                    android:lines="1"
+                    android:layout_centerVertical="true"
+                    fresco:minTextSize="8sp"
+                    android:textColor="@color/color_line_green"
+                    android:textSize="12sp"
+                     />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_toLeftOf="@+id/bt_shuoming"
+                android:layout_marginRight="15dp"
+                android:id="@+id/bt_change"
+                android:layout_width="35dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="5dp"
+                android:background="@mipmap/ic_read_changjiang"/>
+
+            <ImageView
+                android:layout_toLeftOf="@+id/bt_close"
+                android:layout_marginRight="30dp"
+                android:id="@+id/bt_shuoming"
+                android:layout_width="35dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="5dp"
+                android:background="@mipmap/ic_read_shuoming"/>
+
+            <ImageView
+                android:id="@+id/bt_close"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:background="@mipmap/ic_read_close" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include
+        android:visibility="gone"
+
+        android:layout_marginRight="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_read_popuwindow"
+        android:layout_below="@+id/layout_titlebar"/>
+
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/blackView"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</RelativeLayout>

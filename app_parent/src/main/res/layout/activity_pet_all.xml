@@ -44,15 +44,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <!--<com.facebook.drawee.view.SimpleDraweeView-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginBottom="70px"-->
+        <!--android:id="@+id/sv_pet"-->
+        <!--android:layout_width="228px"-->
+        <!--android:layout_height="322px"-->
+         <!--/>-->
     <com.facebook.drawee.view.SimpleDraweeView
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="70px"
         android:id="@+id/sv_pet"
         android:layout_width="228px"
-        android:layout_height="322px"
-         />
-
+        android:layout_height="wrap_content"
+        fresco:viewAspectRatio="0.71"
+        />
     <!--android:layout_height="329px"-->
 
 
@@ -119,8 +127,8 @@
                 android:visibility="visible"
                 android:id="@+id/sv_pet2"
                 android:layout_width="400px"
-                android:layout_height="563px"
-                android:scaleType="centerInside"
+                android:layout_height="wrap_content"
+                fresco:viewAspectRatio="0.71"
                 android:layout_centerInParent="true" />
 
 

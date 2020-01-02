@@ -51,7 +51,7 @@ public class BaseActivity extends AutoLayoutActivity {
         // 如果存在虚拟按键，则设置虚拟按键的背景色
         if (ScreenUtils.checkDeviceHasNavigationBar(this)) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                getWindow().setNavigationBarColor(ContextCompat.getColor(this, android.R.color.black));
+                getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
             }
         }
 

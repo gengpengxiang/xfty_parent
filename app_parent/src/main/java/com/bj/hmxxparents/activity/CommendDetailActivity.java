@@ -151,13 +151,6 @@ public class CommendDetailActivity extends BaseActivity {
                         myThanksTeacherTask(position - 1);
                         break;
                 }
-
-//                if (mDataList.get(position - 1).getNewsType().equals("z1")) {
-//                    firstContent = String.format("谢谢老师鼓励的点赞“%s”", mDataList.get(position - 1).getNewsTitle());
-//                } else {
-//                    firstContent = String.format("谢谢老师奖励的徽章“%s”", mDataList.get(position - 1).getNewsTitle());
-//                }
-//                myThanksTeacherTask(position - 1);
             }
         });
         headerView = mAdapter.setHeaderView(R.layout.recycler_header_line_textview_line, mRecyclerView);

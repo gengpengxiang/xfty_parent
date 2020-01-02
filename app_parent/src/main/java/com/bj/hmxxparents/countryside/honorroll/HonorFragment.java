@@ -196,7 +196,7 @@ public class HonorFragment extends BaseFragment implements IViewHonor {
 
         RecyclerView recyclerView = (RecyclerView) popViewShare.findViewById(R.id.mRecyclerView);
 //        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),5));
-        recyclerView.addItemDecoration(new SpacesItemDecoration(10));
+        //recyclerView.addItemDecoration(new SpacesItemDecoration(10));
 
         //4-8名判断
         if(bean.size()>3){
@@ -248,16 +248,21 @@ public class HonorFragment extends BaseFragment implements IViewHonor {
             mSmartRefreshLayout.finishLoadmore();
         }
 
-        Honor honor = JSON.parseObject(result, new TypeReference<Honor>() {
-        });
-        if(honor.getData()!=null) {
-            if (honor.getRet().equals("1")) {
-                if (currentPage == 0) {
-                    honorList.clear();
+        try {
+
+            Honor honor = JSON.parseObject(result, new TypeReference<Honor>() {
+            });
+            if (honor.getData() != null) {
+                if (honor.getRet().equals("1")) {
+                    if (currentPage == 0) {
+                        honorList.clear();
+                    }
+                    honorList.addAll(honor.getData());
+                    honorAdapter.notifyDataSetChanged();
                 }
-                honorList.addAll(honor.getData());
-                honorAdapter.notifyDataSetChanged();
             }
+        }catch (Exception e){
+
         }
     }
 
